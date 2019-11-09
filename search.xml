@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>初识Java</title>
+    <url>/2019/11/09/%E5%88%9D%E8%AF%86Java/</url>
+    <content><![CDATA[<h2 id="计算机语言发展历史"><a href="#计算机语言发展历史" class="headerlink" title="计算机语言发展历史"></a>计算机语言发展历史</h2><h3 id="第一代-gt-机器语言"><a href="#第一代-gt-机器语言" class="headerlink" title="第一代  -&gt;机器语言"></a>第一代  -&gt;机器语言</h3><h3 id="第二代-gt-汇编语言"><a href="#第二代-gt-汇编语言" class="headerlink" title="第二代  -&gt;汇编语言"></a>第二代  -&gt;汇编语言</h3><h3 id="第三代-gt-高级语言"><a href="#第三代-gt-高级语言" class="headerlink" title="第三代  -&gt;高级语言"></a>第三代  -&gt;高级语言</h3><pre><code>面向过程：C、Fortran、CDBOL、PASCAL、ADA
+面向对象：C++、Java、C#</code></pre><a id="more"></a>
+
+<h2 id="Java简史"><a href="#Java简史" class="headerlink" title="Java简史"></a>Java简史</h2><h3 id="SUN公司是一家什么样的公司"><a href="#SUN公司是一家什么样的公司" class="headerlink" title="SUN公司是一家什么样的公司?"></a>SUN公司是一家什么样的公司?</h3><pre><code>美国SUN(Stanford University Network)公司
+在中国大陆的正式中文名为“太阳计算机系统（中国）有限公司”
+在台湾中文名为“升 阳电脑公司”。</code></pre><h3 id="Java为什么被发明"><a href="#Java为什么被发明" class="headerlink" title="Java为什么被发明?"></a>Java为什么被发明?</h3><pre><code>Green项目。
+应用环境：像电视盒这样的消费类电子产品
+要求：
+语言本身是中立的，也就是跨平台</code></pre><h3 id="Java的发明人"><a href="#Java的发明人" class="headerlink" title="Java的发明人?"></a>Java的发明人?</h3><pre><code>James Gosling</code></pre><h2 id="Contents"><a href="#Contents" class="headerlink" title="Contents"></a>Contents</h2><blockquote>
+</blockquote>
+<pre><code>* Java历史和三大版本
+* Java特点
+* Java跨平台原理（ 虚拟机 字节码文件）
+* Java开发过程 编译 解释
+* 环境变量的配置
+* Java注释类型
+* 反编译工具</code></pre>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java基础</title>
+    <url>/2019/11/09/Java%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Java</title>
     <url>/2019/11/08/Java/</url>
     <content><![CDATA[]]></content>
