@@ -1,12 +1,291 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>eclipse汉化后查看类源码报错问题</title>
+    <url>/2019/11/11/eclipse%E6%B1%89%E5%8C%96%E5%90%8E%E6%9F%A5%E7%9C%8B%E7%B1%BB%E6%BA%90%E7%A0%81%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<blockquote>
+<p>序言：在使用 Eclipse 过程中，主要关注以下几个过程。</p>
+</blockquote>
+<a id="more"></a>
+<ol>
+<li>Hexo 本地安装</li>
+<li>NexT 主题安装及基础配置</li>
+<li>推送到 GitHub 搭建个人博客</li>
+<li>Hexo 本地配置及优化</li>
+<li>NexT 主题 个性化设置</li>
+</ol>
+<blockquote>
+<p>这一部分主要记录 1. Hexo 本地安装 和 2. NexT 主题安装及基础配置</p>
+</blockquote>
+<h2 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<blockquote>
+<p>详情请查阅官网 &gt;&gt; <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">[GO]</a></p>
+</blockquote>
+<h2 id="Hexo-能干什么？"><a href="#Hexo-能干什么？" class="headerlink" title="Hexo 能干什么？"></a>Hexo 能干什么？</h2><p>GitHub Pages + Hexo 搭建博客站点</p>
+<p>Coding Pages + Hexo 搭建博客站点</p>
+<p>Heroku + Hexo 搭建博客站点</p>
+<h2 id="1-Hexo-本地安装"><a href="#1-Hexo-本地安装" class="headerlink" title="1. Hexo 本地安装"></a>1. Hexo 本地安装</h2><p>实例环境： Win 10 专业版 64位操作系统 </p>
+<blockquote>
+<p>这里仅提供一种使用方案</p>
+</blockquote>
+<p>1、 &gt;&gt; <strong>安装前提：</strong> 在安装前，必须检查本地电脑中是否已安装下列应用程序：</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<blockquote>
+<p>如果没有安装请先安装</p>
+<p>请按自身操作系统类型选择 32-bit 版本（基于X86处理器） 或 64-bit 版本（基于X64处理器）</p>
+<ul>
+<li><p>Node.js &gt;&gt; <a href="https://nodejs.org/en/" target="_blank" rel="noopener">[GET]</a><br>推荐下载LTS（长期支持版本）</p>
+</li>
+<li><p>Git &gt;&gt; <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">[GET]</a></p>
+</li>
+</ul>
+<p>一路下一步安装好两个应用程序即可</p>
+<p>注：如果遇到意外报错，请重新安装node.js程序。</p>
+</blockquote>
+<p>如果你的电脑中已经安装上述必备程序，那么接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<p>2、 &gt;&gt; 右键菜单栏里打开 Git Bash 输入命令回车</p>
+<pre><code>$ npm install -g hexo-cli</code></pre><p>3、 &gt;&gt; 安装 Hexo 完成后，请依次执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<blockquote>
+<p>hexo init blog 指的是在当前文件夹下新建blog目录作为博客的根目录</p>
+</blockquote>
+<pre><code>$ cd ~
+$ hexo init &lt;folder&gt; #请自定义博客根目录，这里用 blog 替换 &lt;folder&gt;
+$ cd &lt;folder&gt;
+$ npm install #这是安装所有的依赖包</code></pre><p>新建完成后，指定文件夹的目录如下：</p>
+<pre><code>.
+├── _config.yml #网站的配置信息，可以在此配置大部分的参数。
+├── package.json #应用程序的信息
+├── scaffolds #模版文件夹
+├── source #资源文件夹是存放用户资源的地方
+|   ├── _drafts #草稿
+|   └── _posts #文章
+└── themes #主题文件夹 Hexo 会根据主题来生成静态页面</code></pre><h2 id="2-NexT-主题安装及基础配置"><a href="#2-NexT-主题安装及基础配置" class="headerlink" title="2. NexT 主题安装及基础配置"></a>2. NexT 主题安装及基础配置</h2><p>这里以使用 NexT 主题 为例</p>
+<blockquote>
+<p>NexT 主题官网 &gt;&gt; <a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">[GO]</a></p>
+</blockquote>
+<p>1、 &gt;&gt; 下载主题</p>
+<p>打开 Git Bash 将主题文件拷贝至站点目录的 themes 目录下</p>
+<pre><code>$ cd your-hexo-site #例如blog目录（cd ~/blog）
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre><p>2、&gt;&gt; 启用主题</p>
+<p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 站点配置文件， 找到 theme 字段，并将其值更改为 next。</p>
+<blockquote>
+<p>站点配置文件 （~/blog/_config.yml）（ ~ 是指用户目录如「C:\Users\Administrator」）</p>
+</blockquote>
+<p>到此，已经成功安装并启用了 NexT 主题。</p>
+<blockquote>
+<p>!!! 每次配置完成后请立即 Ctrl+S 保存更改</p>
+</blockquote>
+<p>3、&gt;&gt; 主题设定</p>
+<p>主题配置文件，搜索（Ctrl+F） scheme 关键字。 你会看到有四行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。</p>
+<blockquote>
+<p>主题配置文件（<del>/blog/themes/next/_config.yml）（</del> 指用户目录如「C:\Users\Administrator」）</p>
+</blockquote>
+<pre><code>#scheme: Muse
+#scheme: Mist
+#scheme: Pisces
+scheme: Gemini</code></pre><p>4、&gt;&gt; 设置 语言</p>
+<p>编辑 站点配置文件， 将 language 设置成你所需要的语言。这里选用简体中文，配置如下：</p>
+<pre><code>language: zh-Hans</code></pre><h2 id="3-本地预览"><a href="#3-本地预览" class="headerlink" title="3. 本地预览"></a>3. 本地预览</h2><blockquote>
+<p>开始前请确保 Hexo 和 NexT 主题已经正常安装</p>
+</blockquote>
+<pre><code>hexo g # 等同于 hexo generate，生成静态文件
+hexo s # 等同于 hexo server，在本地服务器运行</code></pre><p>打开浏览器输入 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 能够访问说明部署成功。</p>
+<h2 id="网站配置信息"><a href="#网站配置信息" class="headerlink" title="网站配置信息"></a>网站配置信息</h2><p>你可以在 _config.yml （站点配置文件）中修改大部分的配置。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>网站标题</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td>网站副标题</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>网站描述</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>您的名字</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>网站使用的语言</td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>网站时区。Hexo 默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">时区列表</a>。比如说：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+]]></content>
+      <categories>
+        <category>Eclipse</category>
+      </categories>
+      <tags>
+        <tag>-Eclipse汉化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Eclipse汉化办法</title>
+    <url>/2019/11/11/Eclipse%E6%B1%89%E5%8C%96%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<p>序言：在使用 Eclipse 过程中，主要关注以下几个过程。</p>
+</blockquote>
+<a id="more"></a>
+<ol>
+<li>Hexo 本地安装</li>
+<li>NexT 主题安装及基础配置</li>
+<li>推送到 GitHub 搭建个人博客</li>
+<li>Hexo 本地配置及优化</li>
+<li>NexT 主题 个性化设置</li>
+</ol>
+<blockquote>
+<p>这一部分主要记录 1. Hexo 本地安装 和 2. NexT 主题安装及基础配置</p>
+</blockquote>
+<h2 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<blockquote>
+<p>详情请查阅官网 &gt;&gt; <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">[GO]</a></p>
+</blockquote>
+<h2 id="Hexo-能干什么？"><a href="#Hexo-能干什么？" class="headerlink" title="Hexo 能干什么？"></a>Hexo 能干什么？</h2><p>GitHub Pages + Hexo 搭建博客站点</p>
+<p>Coding Pages + Hexo 搭建博客站点</p>
+<p>Heroku + Hexo 搭建博客站点</p>
+<h2 id="1-Hexo-本地安装"><a href="#1-Hexo-本地安装" class="headerlink" title="1. Hexo 本地安装"></a>1. Hexo 本地安装</h2><p>实例环境： Win 10 专业版 64位操作系统 </p>
+<blockquote>
+<p>这里仅提供一种使用方案</p>
+</blockquote>
+<p>1、 &gt;&gt; <strong>安装前提：</strong> 在安装前，必须检查本地电脑中是否已安装下列应用程序：</p>
+<ul>
+<li>Node.js</li>
+<li>Git</li>
+</ul>
+<blockquote>
+<p>如果没有安装请先安装</p>
+<p>请按自身操作系统类型选择 32-bit 版本（基于X86处理器） 或 64-bit 版本（基于X64处理器）</p>
+<ul>
+<li><p>Node.js &gt;&gt; <a href="https://nodejs.org/en/" target="_blank" rel="noopener">[GET]</a><br>推荐下载LTS（长期支持版本）</p>
+</li>
+<li><p>Git &gt;&gt; <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">[GET]</a></p>
+</li>
+</ul>
+<p>一路下一步安装好两个应用程序即可</p>
+<p>注：如果遇到意外报错，请重新安装node.js程序。</p>
+</blockquote>
+<p>如果你的电脑中已经安装上述必备程序，那么接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<p>2、 &gt;&gt; 右键菜单栏里打开 Git Bash 输入命令回车</p>
+<pre><code>$ npm install -g hexo-cli</code></pre><p>3、 &gt;&gt; 安装 Hexo 完成后，请依次执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<blockquote>
+<p>hexo init blog 指的是在当前文件夹下新建blog目录作为博客的根目录</p>
+</blockquote>
+<pre><code>$ cd ~
+$ hexo init &lt;folder&gt; #请自定义博客根目录，这里用 blog 替换 &lt;folder&gt;
+$ cd &lt;folder&gt;
+$ npm install #这是安装所有的依赖包</code></pre><p>新建完成后，指定文件夹的目录如下：</p>
+<pre><code>.
+├── _config.yml #网站的配置信息，可以在此配置大部分的参数。
+├── package.json #应用程序的信息
+├── scaffolds #模版文件夹
+├── source #资源文件夹是存放用户资源的地方
+|   ├── _drafts #草稿
+|   └── _posts #文章
+└── themes #主题文件夹 Hexo 会根据主题来生成静态页面</code></pre><h2 id="2-NexT-主题安装及基础配置"><a href="#2-NexT-主题安装及基础配置" class="headerlink" title="2. NexT 主题安装及基础配置"></a>2. NexT 主题安装及基础配置</h2><p>这里以使用 NexT 主题 为例</p>
+<blockquote>
+<p>NexT 主题官网 &gt;&gt; <a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">[GO]</a></p>
+</blockquote>
+<p>1、 &gt;&gt; 下载主题</p>
+<p>打开 Git Bash 将主题文件拷贝至站点目录的 themes 目录下</p>
+<pre><code>$ cd your-hexo-site #例如blog目录（cd ~/blog）
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre><p>2、&gt;&gt; 启用主题</p>
+<p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 站点配置文件， 找到 theme 字段，并将其值更改为 next。</p>
+<blockquote>
+<p>站点配置文件 （~/blog/_config.yml）（ ~ 是指用户目录如「C:\Users\Administrator」）</p>
+</blockquote>
+<p>到此，已经成功安装并启用了 NexT 主题。</p>
+<blockquote>
+<p>!!! 每次配置完成后请立即 Ctrl+S 保存更改</p>
+</blockquote>
+<p>3、&gt;&gt; 主题设定</p>
+<p>主题配置文件，搜索（Ctrl+F） scheme 关键字。 你会看到有四行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。</p>
+<blockquote>
+<p>主题配置文件（<del>/blog/themes/next/_config.yml）（</del> 指用户目录如「C:\Users\Administrator」）</p>
+</blockquote>
+<pre><code>#scheme: Muse
+#scheme: Mist
+#scheme: Pisces
+scheme: Gemini</code></pre><p>4、&gt;&gt; 设置 语言</p>
+<p>编辑 站点配置文件， 将 language 设置成你所需要的语言。这里选用简体中文，配置如下：</p>
+<pre><code>language: zh-Hans</code></pre><h2 id="3-本地预览"><a href="#3-本地预览" class="headerlink" title="3. 本地预览"></a>3. 本地预览</h2><blockquote>
+<p>开始前请确保 Hexo 和 NexT 主题已经正常安装</p>
+</blockquote>
+<pre><code>hexo g # 等同于 hexo generate，生成静态文件
+hexo s # 等同于 hexo server，在本地服务器运行</code></pre><p>打开浏览器输入 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 能够访问说明部署成功。</p>
+<h2 id="网站配置信息"><a href="#网站配置信息" class="headerlink" title="网站配置信息"></a>网站配置信息</h2><p>你可以在 _config.yml （站点配置文件）中修改大部分的配置。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>网站标题</td>
+</tr>
+<tr>
+<td><code>subtitle</code></td>
+<td>网站副标题</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>网站描述</td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>您的名字</td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td>网站使用的语言</td>
+</tr>
+<tr>
+<td><code>timezone</code></td>
+<td>网站时区。Hexo 默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">时区列表</a>。比如说：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+]]></content>
+      <categories>
+        <category>Eclipse</category>
+      </categories>
+      <tags>
+        <tag>-Eclipse汉化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>初识Java</title>
     <url>/2019/11/09/%E5%88%9D%E8%AF%86Java/</url>
-    <content><![CDATA[<h2 id="计算机语言发展历史"><a href="#计算机语言发展历史" class="headerlink" title="计算机语言发展历史"></a>计算机语言发展历史</h2><h3 id="第一代-gt-机器语言"><a href="#第一代-gt-机器语言" class="headerlink" title="第一代  -&gt;机器语言"></a>第一代  -&gt;机器语言</h3><h3 id="第二代-gt-汇编语言"><a href="#第二代-gt-汇编语言" class="headerlink" title="第二代  -&gt;汇编语言"></a>第二代  -&gt;汇编语言</h3><h3 id="第三代-gt-高级语言"><a href="#第三代-gt-高级语言" class="headerlink" title="第三代  -&gt;高级语言"></a>第三代  -&gt;高级语言</h3><pre><code>面向过程：C、Fortran、CDBOL、PASCAL、ADA
-面向对象：C++、Java、C#</code></pre><a id="more"></a>
-
-<h2 id="Java简史"><a href="#Java简史" class="headerlink" title="Java简史"></a>Java简史</h2><h3 id="SUN公司是一家什么样的公司"><a href="#SUN公司是一家什么样的公司" class="headerlink" title="SUN公司是一家什么样的公司?"></a>SUN公司是一家什么样的公司?</h3><pre><code>美国SUN(Stanford University Network)公司
+    <content><![CDATA[<h2 id="计算机语言发展历史"><a href="#计算机语言发展历史" class="headerlink" title="计算机语言发展历史"></a>计算机语言发展历史</h2><a id="more"></a>
+<h4 id="第一代-gt-机器语言"><a href="#第一代-gt-机器语言" class="headerlink" title="第一代  -&gt;机器语言"></a>第一代  -&gt;机器语言</h4><h4 id="第二代-gt-汇编语言"><a href="#第二代-gt-汇编语言" class="headerlink" title="第二代  -&gt;汇编语言"></a>第二代  -&gt;汇编语言</h4><h4 id="第三代-gt-高级语言"><a href="#第三代-gt-高级语言" class="headerlink" title="第三代  -&gt;高级语言"></a>第三代  -&gt;高级语言</h4><pre><code>面向过程：C、Fortran、CDBOL、PASCAL、ADA
+面向对象：C++、Java、C#</code></pre><h2 id="Java简史"><a href="#Java简史" class="headerlink" title="Java简史"></a>Java简史</h2><h3 id="SUN公司是一家什么样的公司"><a href="#SUN公司是一家什么样的公司" class="headerlink" title="SUN公司是一家什么样的公司?"></a>SUN公司是一家什么样的公司?</h3><pre><code>美国SUN(Stanford University Network)公司
 在中国大陆的正式中文名为“太阳计算机系统（中国）有限公司”
 在台湾中文名为“升 阳电脑公司”。</code></pre><h3 id="Java为什么被发明"><a href="#Java为什么被发明" class="headerlink" title="Java为什么被发明?"></a>Java为什么被发明?</h3><pre><code>Green项目。
 应用环境：像电视盒这样的消费类电子产品
@@ -45,7 +324,9 @@
   <entry>
     <title>Hexo</title>
     <url>/2017/05/27/Hexo/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+
 <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建一篇新的文章"><a href="#创建一篇新的文章" class="headerlink" title="创建一篇新的文章"></a>创建一篇新的文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
