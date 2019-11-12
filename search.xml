@@ -4,13 +4,13 @@
     <title>eclipse</title>
     <url>/2019/11/11/eclipse/</url>
     <content><![CDATA[<blockquote>
-<p>&#x5E8F;&#x8A00;&#xFF1A;&#x5728;&#x4F7F;&#x7528; Eclipse &#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E3B;&#x8981;&#x5173;&#x6CE8;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>序言：在使用 Eclipse 过程中，主要关注以下几个过程。</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="Hexo-&#x662F;&#x4EC0;&#x4E48;&#xFF1F;"><a href="#Hexo-&#x662F;&#x4EC0;&#x4E48;&#xFF1F;" class="headerlink" title="Hexo &#x662F;&#x4EC0;&#x4E48;&#xFF1F;"></a>Hexo &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2><p>Hexo &#x662F;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x6D01;&#x4E14;&#x9AD8;&#x6548;&#x7684;&#x535A;&#x5BA2;&#x6846;&#x67B6;&#x3002;Hexo &#x4F7F;&#x7528; Markdown&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#xFF09;&#x89E3;&#x6790;&#x6587;&#x7AE0;&#xFF0C;&#x5728;&#x51E0;&#x79D2;&#x5185;&#xFF0C;&#x5373;&#x53EF;&#x5229;&#x7528;&#x9753;&#x4E3D;&#x7684;&#x4E3B;&#x9898;&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;&#x3002;</p>
-<img src="/2019/11/11/eclipse/eclipse/01.jpg" width="50%" height="50%" align="center/">
-<img src="/2019/11/11/eclipse/eclipse/02.png" width="50%" height="50%" align="center/">
+<h2 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<img src="/2019/11/11/eclipse/01.jpg" width="50%" height="50%" align="center/">
+<img src="/2019/11/11/eclipse/02.png" width="50%" height="50%" align="center/">
 
 ]]></content>
       <categories>
@@ -23,11 +23,11 @@
   <entry>
     <title>eclipse汉化后查看类源码报错问题</title>
     <url>/2019/11/11/eclipse%E6%B1%89%E5%8C%96%E5%90%8E%E6%9F%A5%E7%9C%8B%E7%B1%BB%E6%BA%90%E7%A0%81%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>Eclipse&#x6C49;&#x5316;&#x540E;&#x67E5;&#x770B;&#x7C7B;&#x6E90;&#x7801;&#x62A5;&#x9519;&#x95EE;&#x9898;&#x3002;</p>
+    <content><![CDATA[<p>Eclipse汉化后查看类源码报错问题。</p>
 <a id="more"></a>
 
-<h2 id="Hexo-&#x662F;&#x4EC0;&#x4E48;&#xFF1F;"><a href="#Hexo-&#x662F;&#x4EC0;&#x4E48;&#xFF1F;" class="headerlink" title="Hexo &#x662F;&#x4EC0;&#x4E48;&#xFF1F;"></a>Hexo &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2><p>Hexo &#x662F;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x6D01;&#x4E14;&#x9AD8;&#x6548;&#x7684;&#x535A;&#x5BA2;&#x6846;&#x67B6;&#x3002;Hexo &#x4F7F;&#x7528; Markdown&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#xFF09;&#x89E3;&#x6790;&#x6587;&#x7AE0;&#xFF0C;&#x5728;&#x51E0;&#x79D2;&#x5185;&#xFF0C;&#x5373;&#x53EF;&#x5229;&#x7528;&#x9753;&#x4E3D;&#x7684;&#x4E3B;&#x9898;&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;&#x3002;</p>
-<p><img src="/2019/11/11/eclipse%E6%B1%89%E5%8C%96%E5%90%8E%E6%9F%A5%E7%9C%8B%E7%B1%BB%E6%BA%90%E7%A0%81%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/eclipse/01.jpg" alt="01"><br><img src="/2019/11/11/eclipse%E6%B1%89%E5%8C%96%E5%90%8E%E6%9F%A5%E7%9C%8B%E7%B1%BB%E6%BA%90%E7%A0%81%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/eclipse/02.png" alt="02"><br><img src="/2019/11/11/eclipse%E6%B1%89%E5%8C%96%E5%90%8E%E6%9F%A5%E7%9C%8B%E7%B1%BB%E6%BA%90%E7%A0%81%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/eclipse/03.png" alt="02"></p>
+<h2 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p><img src="/2019/11/11/eclipse%E6%B1%89%E5%8C%96%E5%90%8E%E6%9F%A5%E7%9C%8B%E7%B1%BB%E6%BA%90%E7%A0%81%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/01.jpg" alt="01"><br><img src="/2019/11/11/eclipse%E6%B1%89%E5%8C%96%E5%90%8E%E6%9F%A5%E7%9C%8B%E7%B1%BB%E6%BA%90%E7%A0%81%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/02.png" alt="02"><br><img src="/2019/11/11/eclipse%E6%B1%89%E5%8C%96%E5%90%8E%E6%9F%A5%E7%9C%8B%E7%B1%BB%E6%BA%90%E7%A0%81%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%98/03.png" alt="02"></p>
 ]]></content>
       <categories>
         <category>Eclipse</category>
@@ -40,127 +40,127 @@
     <title>Eclipse汉化办法</title>
     <url>/2019/11/11/Eclipse%E6%B1%89%E5%8C%96%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<blockquote>
-<p>&#x5E8F;&#x8A00;&#xFF1A;&#x5728;&#x4F7F;&#x7528; Eclipse &#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E3B;&#x8981;&#x5173;&#x6CE8;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>序言：在使用 Eclipse 过程中，主要关注以下几个过程。</p>
 </blockquote>
 <a id="more"></a>
 <ol>
-<li>Hexo &#x672C;&#x5730;&#x5B89;&#x88C5;</li>
-<li>NexT &#x4E3B;&#x9898;&#x5B89;&#x88C5;&#x53CA;&#x57FA;&#x7840;&#x914D;&#x7F6E;</li>
-<li>&#x63A8;&#x9001;&#x5230; GitHub &#x642D;&#x5EFA;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;</li>
-<li>Hexo &#x672C;&#x5730;&#x914D;&#x7F6E;&#x53CA;&#x4F18;&#x5316;</li>
-<li>NexT &#x4E3B;&#x9898; &#x4E2A;&#x6027;&#x5316;&#x8BBE;&#x7F6E;</li>
+<li>Hexo 本地安装</li>
+<li>NexT 主题安装及基础配置</li>
+<li>推送到 GitHub 搭建个人博客</li>
+<li>Hexo 本地配置及优化</li>
+<li>NexT 主题 个性化设置</li>
 </ol>
 <blockquote>
-<p>&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x4E3B;&#x8981;&#x8BB0;&#x5F55; 1. Hexo &#x672C;&#x5730;&#x5B89;&#x88C5; &#x548C; 2. NexT &#x4E3B;&#x9898;&#x5B89;&#x88C5;&#x53CA;&#x57FA;&#x7840;&#x914D;&#x7F6E;</p>
+<p>这一部分主要记录 1. Hexo 本地安装 和 2. NexT 主题安装及基础配置</p>
 </blockquote>
-<h2 id="Hexo-&#x662F;&#x4EC0;&#x4E48;&#xFF1F;"><a href="#Hexo-&#x662F;&#x4EC0;&#x4E48;&#xFF1F;" class="headerlink" title="Hexo &#x662F;&#x4EC0;&#x4E48;&#xFF1F;"></a>Hexo &#x662F;&#x4EC0;&#x4E48;&#xFF1F;</h2><p>Hexo &#x662F;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x6D01;&#x4E14;&#x9AD8;&#x6548;&#x7684;&#x535A;&#x5BA2;&#x6846;&#x67B6;&#x3002;Hexo &#x4F7F;&#x7528; Markdown&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#xFF09;&#x89E3;&#x6790;&#x6587;&#x7AE0;&#xFF0C;&#x5728;&#x51E0;&#x79D2;&#x5185;&#xFF0C;&#x5373;&#x53EF;&#x5229;&#x7528;&#x9753;&#x4E3D;&#x7684;&#x4E3B;&#x9898;&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;&#x3002;</p>
+<h2 id="Hexo-是什么？"><a href="#Hexo-是什么？" class="headerlink" title="Hexo 是什么？"></a>Hexo 是什么？</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <blockquote>
-<p>&#x8BE6;&#x60C5;&#x8BF7;&#x67E5;&#x9605;&#x5B98;&#x7F51; &gt;&gt; <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">[GO]</a></p>
+<p>详情请查阅官网 &gt;&gt; <a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">[GO]</a></p>
 </blockquote>
-<h2 id="Hexo-&#x80FD;&#x5E72;&#x4EC0;&#x4E48;&#xFF1F;"><a href="#Hexo-&#x80FD;&#x5E72;&#x4EC0;&#x4E48;&#xFF1F;" class="headerlink" title="Hexo &#x80FD;&#x5E72;&#x4EC0;&#x4E48;&#xFF1F;"></a>Hexo &#x80FD;&#x5E72;&#x4EC0;&#x4E48;&#xFF1F;</h2><p>GitHub Pages + Hexo &#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x7AD9;&#x70B9;</p>
-<p>Coding Pages + Hexo &#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x7AD9;&#x70B9;</p>
-<p>Heroku + Hexo &#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x7AD9;&#x70B9;</p>
-<h2 id="1-Hexo-&#x672C;&#x5730;&#x5B89;&#x88C5;"><a href="#1-Hexo-&#x672C;&#x5730;&#x5B89;&#x88C5;" class="headerlink" title="1. Hexo &#x672C;&#x5730;&#x5B89;&#x88C5;"></a>1. Hexo &#x672C;&#x5730;&#x5B89;&#x88C5;</h2><p>&#x5B9E;&#x4F8B;&#x73AF;&#x5883;&#xFF1A; Win 10 &#x4E13;&#x4E1A;&#x7248; 64&#x4F4D;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF; </p>
+<h2 id="Hexo-能干什么？"><a href="#Hexo-能干什么？" class="headerlink" title="Hexo 能干什么？"></a>Hexo 能干什么？</h2><p>GitHub Pages + Hexo 搭建博客站点</p>
+<p>Coding Pages + Hexo 搭建博客站点</p>
+<p>Heroku + Hexo 搭建博客站点</p>
+<h2 id="1-Hexo-本地安装"><a href="#1-Hexo-本地安装" class="headerlink" title="1. Hexo 本地安装"></a>1. Hexo 本地安装</h2><p>实例环境： Win 10 专业版 64位操作系统 </p>
 <blockquote>
-<p>&#x8FD9;&#x91CC;&#x4EC5;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x4F7F;&#x7528;&#x65B9;&#x6848;</p>
+<p>这里仅提供一种使用方案</p>
 </blockquote>
-<p>1&#x3001; &gt;&gt; <strong>&#x5B89;&#x88C5;&#x524D;&#x63D0;&#xFF1A;</strong> &#x5728;&#x5B89;&#x88C5;&#x524D;&#xFF0C;&#x5FC5;&#x987B;&#x68C0;&#x67E5;&#x672C;&#x5730;&#x7535;&#x8111;&#x4E2D;&#x662F;&#x5426;&#x5DF2;&#x5B89;&#x88C5;&#x4E0B;&#x5217;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<p>1、 &gt;&gt; <strong>安装前提：</strong> 在安装前，必须检查本地电脑中是否已安装下列应用程序：</p>
 <ul>
 <li>Node.js</li>
 <li>Git</li>
 </ul>
 <blockquote>
-<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x8BF7;&#x5148;&#x5B89;&#x88C5;</p>
-<p>&#x8BF7;&#x6309;&#x81EA;&#x8EAB;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;&#x9009;&#x62E9; 32-bit &#x7248;&#x672C;&#xFF08;&#x57FA;&#x4E8E;X86&#x5904;&#x7406;&#x5668;&#xFF09; &#x6216; 64-bit &#x7248;&#x672C;&#xFF08;&#x57FA;&#x4E8E;X64&#x5904;&#x7406;&#x5668;&#xFF09;</p>
+<p>如果没有安装请先安装</p>
+<p>请按自身操作系统类型选择 32-bit 版本（基于X86处理器） 或 64-bit 版本（基于X64处理器）</p>
 <ul>
-<li><p>Node.js &gt;&gt; <a href="https://nodejs.org/en/" target="_blank" rel="noopener">[GET]</a><br>&#x63A8;&#x8350;&#x4E0B;&#x8F7D;LTS&#xFF08;&#x957F;&#x671F;&#x652F;&#x6301;&#x7248;&#x672C;&#xFF09;</p>
+<li><p>Node.js &gt;&gt; <a href="https://nodejs.org/en/" target="_blank" rel="noopener">[GET]</a><br>推荐下载LTS（长期支持版本）</p>
 </li>
 <li><p>Git &gt;&gt; <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">[GET]</a></p>
 </li>
 </ul>
-<p>&#x4E00;&#x8DEF;&#x4E0B;&#x4E00;&#x6B65;&#x5B89;&#x88C5;&#x597D;&#x4E24;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5373;&#x53EF;</p>
-<p>&#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x9047;&#x5230;&#x610F;&#x5916;&#x62A5;&#x9519;&#xFF0C;&#x8BF7;&#x91CD;&#x65B0;&#x5B89;&#x88C5;node.js&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>一路下一步安装好两个应用程序即可</p>
+<p>注：如果遇到意外报错，请重新安装node.js程序。</p>
 </blockquote>
-<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x7535;&#x8111;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x4E0A;&#x8FF0;&#x5FC5;&#x5907;&#x7A0B;&#x5E8F;&#xFF0C;&#x90A3;&#x4E48;&#x63A5;&#x4E0B;&#x6765;&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528; npm &#x5373;&#x53EF;&#x5B8C;&#x6210; Hexo &#x7684;&#x5B89;&#x88C5;&#x3002;</p>
-<p>2&#x3001; &gt;&gt; &#x53F3;&#x952E;&#x83DC;&#x5355;&#x680F;&#x91CC;&#x6253;&#x5F00; Git Bash &#x8F93;&#x5165;&#x547D;&#x4EE4;&#x56DE;&#x8F66;</p>
-<pre><code>$ npm install -g hexo-cli</code></pre><p>3&#x3001; &gt;&gt; &#x5B89;&#x88C5; Hexo &#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x8BF7;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x4E0B;&#x5217;&#x547D;&#x4EE4;&#xFF0C;Hexo &#x5C06;&#x4F1A;&#x5728;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x65B0;&#x5EFA;&#x6240;&#x9700;&#x8981;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>如果你的电脑中已经安装上述必备程序，那么接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<p>2、 &gt;&gt; 右键菜单栏里打开 Git Bash 输入命令回车</p>
+<pre><code>$ npm install -g hexo-cli</code></pre><p>3、 &gt;&gt; 安装 Hexo 完成后，请依次执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
 <blockquote>
-<p>hexo init blog &#x6307;&#x7684;&#x662F;&#x5728;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x65B0;&#x5EFA;blog&#x76EE;&#x5F55;&#x4F5C;&#x4E3A;&#x535A;&#x5BA2;&#x7684;&#x6839;&#x76EE;&#x5F55;</p>
+<p>hexo init blog 指的是在当前文件夹下新建blog目录作为博客的根目录</p>
 </blockquote>
 <pre><code>$ cd ~
-$ hexo init &lt;folder&gt; #&#x8BF7;&#x81EA;&#x5B9A;&#x4E49;&#x535A;&#x5BA2;&#x6839;&#x76EE;&#x5F55;&#xFF0C;&#x8FD9;&#x91CC;&#x7528; blog &#x66FF;&#x6362; &lt;folder&gt;
+$ hexo init &lt;folder&gt; #请自定义博客根目录，这里用 blog 替换 &lt;folder&gt;
 $ cd &lt;folder&gt;
-$ npm install #&#x8FD9;&#x662F;&#x5B89;&#x88C5;&#x6240;&#x6709;&#x7684;&#x4F9D;&#x8D56;&#x5305;</code></pre><p>&#x65B0;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x76EE;&#x5F55;&#x5982;&#x4E0B;&#xFF1A;</p>
+$ npm install #这是安装所有的依赖包</code></pre><p>新建完成后，指定文件夹的目录如下：</p>
 <pre><code>.
-&#x251C;&#x2500;&#x2500; _config.yml #&#x7F51;&#x7AD9;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x914D;&#x7F6E;&#x5927;&#x90E8;&#x5206;&#x7684;&#x53C2;&#x6570;&#x3002;
-&#x251C;&#x2500;&#x2500; package.json #&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4FE1;&#x606F;
-&#x251C;&#x2500;&#x2500; scaffolds #&#x6A21;&#x7248;&#x6587;&#x4EF6;&#x5939;
-&#x251C;&#x2500;&#x2500; source #&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x5939;&#x662F;&#x5B58;&#x653E;&#x7528;&#x6237;&#x8D44;&#x6E90;&#x7684;&#x5730;&#x65B9;
-|   &#x251C;&#x2500;&#x2500; _drafts #&#x8349;&#x7A3F;
-|   &#x2514;&#x2500;&#x2500; _posts #&#x6587;&#x7AE0;
-&#x2514;&#x2500;&#x2500; themes #&#x4E3B;&#x9898;&#x6587;&#x4EF6;&#x5939; Hexo &#x4F1A;&#x6839;&#x636E;&#x4E3B;&#x9898;&#x6765;&#x751F;&#x6210;&#x9759;&#x6001;&#x9875;&#x9762;</code></pre><h2 id="2-NexT-&#x4E3B;&#x9898;&#x5B89;&#x88C5;&#x53CA;&#x57FA;&#x7840;&#x914D;&#x7F6E;"><a href="#2-NexT-&#x4E3B;&#x9898;&#x5B89;&#x88C5;&#x53CA;&#x57FA;&#x7840;&#x914D;&#x7F6E;" class="headerlink" title="2. NexT &#x4E3B;&#x9898;&#x5B89;&#x88C5;&#x53CA;&#x57FA;&#x7840;&#x914D;&#x7F6E;"></a>2. NexT &#x4E3B;&#x9898;&#x5B89;&#x88C5;&#x53CA;&#x57FA;&#x7840;&#x914D;&#x7F6E;</h2><p>&#x8FD9;&#x91CC;&#x4EE5;&#x4F7F;&#x7528; NexT &#x4E3B;&#x9898; &#x4E3A;&#x4F8B;</p>
+├── _config.yml #网站的配置信息，可以在此配置大部分的参数。
+├── package.json #应用程序的信息
+├── scaffolds #模版文件夹
+├── source #资源文件夹是存放用户资源的地方
+|   ├── _drafts #草稿
+|   └── _posts #文章
+└── themes #主题文件夹 Hexo 会根据主题来生成静态页面</code></pre><h2 id="2-NexT-主题安装及基础配置"><a href="#2-NexT-主题安装及基础配置" class="headerlink" title="2. NexT 主题安装及基础配置"></a>2. NexT 主题安装及基础配置</h2><p>这里以使用 NexT 主题 为例</p>
 <blockquote>
-<p>NexT &#x4E3B;&#x9898;&#x5B98;&#x7F51; &gt;&gt; <a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">[GO]</a></p>
+<p>NexT 主题官网 &gt;&gt; <a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">[GO]</a></p>
 </blockquote>
-<p>1&#x3001; &gt;&gt; &#x4E0B;&#x8F7D;&#x4E3B;&#x9898;</p>
-<p>&#x6253;&#x5F00; Git Bash &#x5C06;&#x4E3B;&#x9898;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x81F3;&#x7AD9;&#x70B9;&#x76EE;&#x5F55;&#x7684; themes &#x76EE;&#x5F55;&#x4E0B;</p>
-<pre><code>$ cd your-hexo-site #&#x4F8B;&#x5982;blog&#x76EE;&#x5F55;&#xFF08;cd ~/blog&#xFF09;
-$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre><p>2&#x3001;&gt;&gt; &#x542F;&#x7528;&#x4E3B;&#x9898;</p>
-<p>&#x4E0E;&#x6240;&#x6709; Hexo &#x4E3B;&#x9898;&#x542F;&#x7528;&#x7684;&#x6A21;&#x5F0F;&#x4E00;&#x6837;&#x3002; &#x5F53; &#x514B;&#x9686;/&#x4E0B;&#x8F7D; &#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6253;&#x5F00; &#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C; &#x627E;&#x5230; theme &#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x503C;&#x66F4;&#x6539;&#x4E3A; next&#x3002;</p>
+<p>1、 &gt;&gt; 下载主题</p>
+<p>打开 Git Bash 将主题文件拷贝至站点目录的 themes 目录下</p>
+<pre><code>$ cd your-hexo-site #例如blog目录（cd ~/blog）
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre><p>2、&gt;&gt; 启用主题</p>
+<p>与所有 Hexo 主题启用的模式一样。 当 克隆/下载 完成后，打开 站点配置文件， 找到 theme 字段，并将其值更改为 next。</p>
 <blockquote>
-<p>&#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6; &#xFF08;~/blog/_config.yml&#xFF09;&#xFF08; ~ &#x662F;&#x6307;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x5982;&#x300C;C:\Users\Administrator&#x300D;&#xFF09;</p>
+<p>站点配置文件 （~/blog/_config.yml）（ ~ 是指用户目录如「C:\Users\Administrator」）</p>
 </blockquote>
-<p>&#x5230;&#x6B64;&#xFF0C;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x5B89;&#x88C5;&#x5E76;&#x542F;&#x7528;&#x4E86; NexT &#x4E3B;&#x9898;&#x3002;</p>
+<p>到此，已经成功安装并启用了 NexT 主题。</p>
 <blockquote>
-<p>!!! &#x6BCF;&#x6B21;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#x8BF7;&#x7ACB;&#x5373; Ctrl+S &#x4FDD;&#x5B58;&#x66F4;&#x6539;</p>
+<p>!!! 每次配置完成后请立即 Ctrl+S 保存更改</p>
 </blockquote>
-<p>3&#x3001;&gt;&gt; &#x4E3B;&#x9898;&#x8BBE;&#x5B9A;</p>
-<p>&#x4E3B;&#x9898;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x641C;&#x7D22;&#xFF08;Ctrl+F&#xFF09; scheme &#x5173;&#x952E;&#x5B57;&#x3002; &#x4F60;&#x4F1A;&#x770B;&#x5230;&#x6709;&#x56DB;&#x884C; scheme &#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x5C06;&#x4F60;&#x9700;&#x7528;&#x542F;&#x7528;&#x7684; scheme &#x524D;&#x9762;&#x6CE8;&#x91CA; # &#x53BB;&#x9664;&#x5373;&#x53EF;&#x3002;</p>
+<p>3、&gt;&gt; 主题设定</p>
+<p>主题配置文件，搜索（Ctrl+F） scheme 关键字。 你会看到有四行 scheme 的配置，将你需用启用的 scheme 前面注释 # 去除即可。</p>
 <blockquote>
-<p>&#x4E3B;&#x9898;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;<del>/blog/themes/next/_config.yml&#xFF09;&#xFF08;</del> &#x6307;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x5982;&#x300C;C:\Users\Administrator&#x300D;&#xFF09;</p>
+<p>主题配置文件（<del>/blog/themes/next/_config.yml）（</del> 指用户目录如「C:\Users\Administrator」）</p>
 </blockquote>
 <pre><code>#scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-scheme: Gemini</code></pre><p>4&#x3001;&gt;&gt; &#x8BBE;&#x7F6E; &#x8BED;&#x8A00;</p>
-<p>&#x7F16;&#x8F91; &#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C; &#x5C06; language &#x8BBE;&#x7F6E;&#x6210;&#x4F60;&#x6240;&#x9700;&#x8981;&#x7684;&#x8BED;&#x8A00;&#x3002;&#x8FD9;&#x91CC;&#x9009;&#x7528;&#x7B80;&#x4F53;&#x4E2D;&#x6587;&#xFF0C;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>language: zh-Hans</code></pre><h2 id="3-&#x672C;&#x5730;&#x9884;&#x89C8;"><a href="#3-&#x672C;&#x5730;&#x9884;&#x89C8;" class="headerlink" title="3. &#x672C;&#x5730;&#x9884;&#x89C8;"></a>3. &#x672C;&#x5730;&#x9884;&#x89C8;</h2><blockquote>
-<p>&#x5F00;&#x59CB;&#x524D;&#x8BF7;&#x786E;&#x4FDD; Hexo &#x548C; NexT &#x4E3B;&#x9898;&#x5DF2;&#x7ECF;&#x6B63;&#x5E38;&#x5B89;&#x88C5;</p>
+scheme: Gemini</code></pre><p>4、&gt;&gt; 设置 语言</p>
+<p>编辑 站点配置文件， 将 language 设置成你所需要的语言。这里选用简体中文，配置如下：</p>
+<pre><code>language: zh-Hans</code></pre><h2 id="3-本地预览"><a href="#3-本地预览" class="headerlink" title="3. 本地预览"></a>3. 本地预览</h2><blockquote>
+<p>开始前请确保 Hexo 和 NexT 主题已经正常安装</p>
 </blockquote>
-<pre><code>hexo g # &#x7B49;&#x540C;&#x4E8E; hexo generate&#xFF0C;&#x751F;&#x6210;&#x9759;&#x6001;&#x6587;&#x4EF6;
-hexo s # &#x7B49;&#x540C;&#x4E8E; hexo server&#xFF0C;&#x5728;&#x672C;&#x5730;&#x670D;&#x52A1;&#x5668;&#x8FD0;&#x884C;</code></pre><p>&#x6253;&#x5F00;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165; <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> &#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x8BF4;&#x660E;&#x90E8;&#x7F72;&#x6210;&#x529F;&#x3002;</p>
-<h2 id="&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x4FE1;&#x606F;"><a href="#&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x4FE1;&#x606F;" class="headerlink" title="&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x4FE1;&#x606F;"></a>&#x7F51;&#x7AD9;&#x914D;&#x7F6E;&#x4FE1;&#x606F;</h2><p>&#x4F60;&#x53EF;&#x4EE5;&#x5728; _config.yml &#xFF08;&#x7AD9;&#x70B9;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF09;&#x4E2D;&#x4FEE;&#x6539;&#x5927;&#x90E8;&#x5206;&#x7684;&#x914D;&#x7F6E;&#x3002;</p>
+<pre><code>hexo g # 等同于 hexo generate，生成静态文件
+hexo s # 等同于 hexo server，在本地服务器运行</code></pre><p>打开浏览器输入 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a> 能够访问说明部署成功。</p>
+<h2 id="网站配置信息"><a href="#网站配置信息" class="headerlink" title="网站配置信息"></a>网站配置信息</h2><p>你可以在 _config.yml （站点配置文件）中修改大部分的配置。</p>
 <table>
 <thead>
 <tr>
-<th>&#x53C2;&#x6570;</th>
-<th>&#x63CF;&#x8FF0;</th>
+<th>参数</th>
+<th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>title</code></td>
-<td>&#x7F51;&#x7AD9;&#x6807;&#x9898;</td>
+<td>网站标题</td>
 </tr>
 <tr>
 <td><code>subtitle</code></td>
-<td>&#x7F51;&#x7AD9;&#x526F;&#x6807;&#x9898;</td>
+<td>网站副标题</td>
 </tr>
 <tr>
 <td><code>description</code></td>
-<td>&#x7F51;&#x7AD9;&#x63CF;&#x8FF0;</td>
+<td>网站描述</td>
 </tr>
 <tr>
 <td><code>author</code></td>
-<td>&#x60A8;&#x7684;&#x540D;&#x5B57;</td>
+<td>您的名字</td>
 </tr>
 <tr>
 <td><code>language</code></td>
-<td>&#x7F51;&#x7AD9;&#x4F7F;&#x7528;&#x7684;&#x8BED;&#x8A00;</td>
+<td>网站使用的语言</td>
 </tr>
 <tr>
 <td><code>timezone</code></td>
-<td>&#x7F51;&#x7AD9;&#x65F6;&#x533A;&#x3002;Hexo &#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x60A8;&#x7535;&#x8111;&#x7684;&#x65F6;&#x533A;&#x3002;<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">&#x65F6;&#x533A;&#x5217;&#x8868;</a>&#x3002;&#x6BD4;&#x5982;&#x8BF4;&#xFF1A;<code>America/New_York</code>, <code>Japan</code>, &#x548C; <code>UTC</code> &#x3002;</td>
+<td>网站时区。Hexo 默认使用您电脑的时区。<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones" target="_blank" rel="noopener">时区列表</a>。比如说：<code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。</td>
 </tr>
 </tbody>
 </table>
@@ -179,22 +179,22 @@ hexo s # &#x7B49;&#x540C;&#x4E8E; hexo server&#xFF0C;&#x5728;&#x672C;&#x5730;&#x
   <entry>
     <title>初识Java</title>
     <url>/2019/11/09/%E5%88%9D%E8%AF%86Java/</url>
-    <content><![CDATA[<h2 id="&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#x53D1;&#x5C55;&#x5386;&#x53F2;"><a href="#&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#x53D1;&#x5C55;&#x5386;&#x53F2;" class="headerlink" title="&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#x53D1;&#x5C55;&#x5386;&#x53F2;"></a>&#x8BA1;&#x7B97;&#x673A;&#x8BED;&#x8A00;&#x53D1;&#x5C55;&#x5386;&#x53F2;</h2><a id="more"></a>
-<h4 id="&#x7B2C;&#x4E00;&#x4EE3;-gt-&#x673A;&#x5668;&#x8BED;&#x8A00;"><a href="#&#x7B2C;&#x4E00;&#x4EE3;-gt-&#x673A;&#x5668;&#x8BED;&#x8A00;" class="headerlink" title="&#x7B2C;&#x4E00;&#x4EE3;  -&gt;&#x673A;&#x5668;&#x8BED;&#x8A00;"></a>&#x7B2C;&#x4E00;&#x4EE3;  -&gt;&#x673A;&#x5668;&#x8BED;&#x8A00;</h4><h4 id="&#x7B2C;&#x4E8C;&#x4EE3;-gt-&#x6C47;&#x7F16;&#x8BED;&#x8A00;"><a href="#&#x7B2C;&#x4E8C;&#x4EE3;-gt-&#x6C47;&#x7F16;&#x8BED;&#x8A00;" class="headerlink" title="&#x7B2C;&#x4E8C;&#x4EE3;  -&gt;&#x6C47;&#x7F16;&#x8BED;&#x8A00;"></a>&#x7B2C;&#x4E8C;&#x4EE3;  -&gt;&#x6C47;&#x7F16;&#x8BED;&#x8A00;</h4><h4 id="&#x7B2C;&#x4E09;&#x4EE3;-gt-&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;"><a href="#&#x7B2C;&#x4E09;&#x4EE3;-gt-&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;" class="headerlink" title="&#x7B2C;&#x4E09;&#x4EE3;  -&gt;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;"></a>&#x7B2C;&#x4E09;&#x4EE3;  -&gt;&#x9AD8;&#x7EA7;&#x8BED;&#x8A00;</h4><pre><code>&#x9762;&#x5411;&#x8FC7;&#x7A0B;&#xFF1A;C&#x3001;Fortran&#x3001;CDBOL&#x3001;PASCAL&#x3001;ADA
-&#x9762;&#x5411;&#x5BF9;&#x8C61;&#xFF1A;C++&#x3001;Java&#x3001;C#</code></pre><h2 id="Java&#x7B80;&#x53F2;"><a href="#Java&#x7B80;&#x53F2;" class="headerlink" title="Java&#x7B80;&#x53F2;"></a>Java&#x7B80;&#x53F2;</h2><h3 id="SUN&#x516C;&#x53F8;&#x662F;&#x4E00;&#x5BB6;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x516C;&#x53F8;"><a href="#SUN&#x516C;&#x53F8;&#x662F;&#x4E00;&#x5BB6;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x516C;&#x53F8;" class="headerlink" title="SUN&#x516C;&#x53F8;&#x662F;&#x4E00;&#x5BB6;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x516C;&#x53F8;?"></a>SUN&#x516C;&#x53F8;&#x662F;&#x4E00;&#x5BB6;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x516C;&#x53F8;?</h3><pre><code>&#x7F8E;&#x56FD;SUN(Stanford University Network)&#x516C;&#x53F8;
-&#x5728;&#x4E2D;&#x56FD;&#x5927;&#x9646;&#x7684;&#x6B63;&#x5F0F;&#x4E2D;&#x6587;&#x540D;&#x4E3A;&#x201C;&#x592A;&#x9633;&#x8BA1;&#x7B97;&#x673A;&#x7CFB;&#x7EDF;&#xFF08;&#x4E2D;&#x56FD;&#xFF09;&#x6709;&#x9650;&#x516C;&#x53F8;&#x201D;
-&#x5728;&#x53F0;&#x6E7E;&#x4E2D;&#x6587;&#x540D;&#x4E3A;&#x201C;&#x5347; &#x9633;&#x7535;&#x8111;&#x516C;&#x53F8;&#x201D;&#x3002;</code></pre><h3 id="Java&#x4E3A;&#x4EC0;&#x4E48;&#x88AB;&#x53D1;&#x660E;"><a href="#Java&#x4E3A;&#x4EC0;&#x4E48;&#x88AB;&#x53D1;&#x660E;" class="headerlink" title="Java&#x4E3A;&#x4EC0;&#x4E48;&#x88AB;&#x53D1;&#x660E;?"></a>Java&#x4E3A;&#x4EC0;&#x4E48;&#x88AB;&#x53D1;&#x660E;?</h3><pre><code>Green&#x9879;&#x76EE;&#x3002;
-&#x5E94;&#x7528;&#x73AF;&#x5883;&#xFF1A;&#x50CF;&#x7535;&#x89C6;&#x76D2;&#x8FD9;&#x6837;&#x7684;&#x6D88;&#x8D39;&#x7C7B;&#x7535;&#x5B50;&#x4EA7;&#x54C1;
-&#x8981;&#x6C42;&#xFF1A;
-&#x8BED;&#x8A00;&#x672C;&#x8EAB;&#x662F;&#x4E2D;&#x7ACB;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8DE8;&#x5E73;&#x53F0;</code></pre><h3 id="Java&#x7684;&#x53D1;&#x660E;&#x4EBA;"><a href="#Java&#x7684;&#x53D1;&#x660E;&#x4EBA;" class="headerlink" title="Java&#x7684;&#x53D1;&#x660E;&#x4EBA;?"></a>Java&#x7684;&#x53D1;&#x660E;&#x4EBA;?</h3><pre><code>James Gosling</code></pre><h2 id="Contents"><a href="#Contents" class="headerlink" title="Contents"></a>Contents</h2><blockquote>
+    <content><![CDATA[<h2 id="计算机语言发展历史"><a href="#计算机语言发展历史" class="headerlink" title="计算机语言发展历史"></a>计算机语言发展历史</h2><a id="more"></a>
+<h4 id="第一代-gt-机器语言"><a href="#第一代-gt-机器语言" class="headerlink" title="第一代  -&gt;机器语言"></a>第一代  -&gt;机器语言</h4><h4 id="第二代-gt-汇编语言"><a href="#第二代-gt-汇编语言" class="headerlink" title="第二代  -&gt;汇编语言"></a>第二代  -&gt;汇编语言</h4><h4 id="第三代-gt-高级语言"><a href="#第三代-gt-高级语言" class="headerlink" title="第三代  -&gt;高级语言"></a>第三代  -&gt;高级语言</h4><pre><code>面向过程：C、Fortran、CDBOL、PASCAL、ADA
+面向对象：C++、Java、C#</code></pre><h2 id="Java简史"><a href="#Java简史" class="headerlink" title="Java简史"></a>Java简史</h2><h3 id="SUN公司是一家什么样的公司"><a href="#SUN公司是一家什么样的公司" class="headerlink" title="SUN公司是一家什么样的公司?"></a>SUN公司是一家什么样的公司?</h3><pre><code>美国SUN(Stanford University Network)公司
+在中国大陆的正式中文名为“太阳计算机系统（中国）有限公司”
+在台湾中文名为“升 阳电脑公司”。</code></pre><h3 id="Java为什么被发明"><a href="#Java为什么被发明" class="headerlink" title="Java为什么被发明?"></a>Java为什么被发明?</h3><pre><code>Green项目。
+应用环境：像电视盒这样的消费类电子产品
+要求：
+语言本身是中立的，也就是跨平台</code></pre><h3 id="Java的发明人"><a href="#Java的发明人" class="headerlink" title="Java的发明人?"></a>Java的发明人?</h3><pre><code>James Gosling</code></pre><h2 id="Contents"><a href="#Contents" class="headerlink" title="Contents"></a>Contents</h2><blockquote>
 </blockquote>
-<pre><code>* Java&#x5386;&#x53F2;&#x548C;&#x4E09;&#x5927;&#x7248;&#x672C;
-* Java&#x7279;&#x70B9;
-* Java&#x8DE8;&#x5E73;&#x53F0;&#x539F;&#x7406;&#xFF08; &#x865A;&#x62DF;&#x673A; &#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;&#xFF09;
-* Java&#x5F00;&#x53D1;&#x8FC7;&#x7A0B; &#x7F16;&#x8BD1; &#x89E3;&#x91CA;
-* &#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x914D;&#x7F6E;
-* Java&#x6CE8;&#x91CA;&#x7C7B;&#x578B;
-* &#x53CD;&#x7F16;&#x8BD1;&#x5DE5;&#x5177;</code></pre>]]></content>
+<pre><code>* Java历史和三大版本
+* Java特点
+* Java跨平台原理（ 虚拟机 字节码文件）
+* Java开发过程 编译 解释
+* 环境变量的配置
+* Java注释类型
+* 反编译工具</code></pre>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -223,16 +223,16 @@ hexo s # &#x7B49;&#x540C;&#x4E8E; hexo server&#xFF0C;&#x5728;&#x672C;&#x5730;&#x
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
 
-<h2 id="&#x5FEB;&#x901F;&#x5F00;&#x59CB;"><a href="#&#x5FEB;&#x901F;&#x5F00;&#x59CB;" class="headerlink" title="&#x5FEB;&#x901F;&#x5F00;&#x59CB;"></a>&#x5FEB;&#x901F;&#x5F00;&#x59CB;</h2><h3 id="&#x521B;&#x5EFA;&#x4E00;&#x7BC7;&#x65B0;&#x7684;&#x6587;&#x7AE0;"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x7BC7;&#x65B0;&#x7684;&#x6587;&#x7AE0;" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x7BC7;&#x65B0;&#x7684;&#x6587;&#x7AE0;"></a>&#x521B;&#x5EFA;&#x4E00;&#x7BC7;&#x65B0;&#x7684;&#x6587;&#x7AE0;</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建一篇新的文章"><a href="#创建一篇新的文章" class="headerlink" title="创建一篇新的文章"></a>创建一篇新的文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="&#x8FD0;&#x884C;&#x670D;&#x52A1;"><a href="#&#x8FD0;&#x884C;&#x670D;&#x52A1;" class="headerlink" title="&#x8FD0;&#x884C;&#x670D;&#x52A1;"></a>&#x8FD0;&#x884C;&#x670D;&#x52A1;</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="&#x751F;&#x6210;&#x9759;&#x6001;&#x6587;&#x4EF6;"><a href="#&#x751F;&#x6210;&#x9759;&#x6001;&#x6587;&#x4EF6;" class="headerlink" title="&#x751F;&#x6210;&#x9759;&#x6001;&#x6587;&#x4EF6;"></a>&#x751F;&#x6210;&#x9759;&#x6001;&#x6587;&#x4EF6;</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="&#x90E8;&#x7F72;&#x5230;&#x8FDC;&#x7A0B;&#x7AD9;&#x70B9;"><a href="#&#x90E8;&#x7F72;&#x5230;&#x8FDC;&#x7A0B;&#x7AD9;&#x70B9;" class="headerlink" title="&#x90E8;&#x7F72;&#x5230;&#x8FDC;&#x7A0B;&#x7AD9;&#x70B9;"></a>&#x90E8;&#x7F72;&#x5230;&#x8FDC;&#x7A0B;&#x7AD9;&#x70B9;</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
