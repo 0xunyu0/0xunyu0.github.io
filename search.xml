@@ -662,7 +662,10 @@ finally
   <entry>
     <title>1. Java 面向对象基础</title>
     <url>/2019/11/15/Java-Object-Base/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本文部分内容来源于网络，为了把本文主题讲得清晰透彻，也整合了很多我认为不错的技术博客内容，引用了其中一些比较好的博客文章，如有侵权，请联系作者。<br>该系列博文会告诉你如何从入门到进阶，一步步地学习Java基础知识，并上手进行实战，接着了解每个Java知识点背后的实现原理，更完整地了解整个Java技术体系，形成自己的知识框架。为了更好地总结和检验你的学习成果，本系列文章也会提供每个知识点对应的面试题以及参考答案。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note success">
+            <p>为了更好的构建知识框架，这里归档的信息部分内容引用于来源于网络，如有侵权，请联系作者。</p>
+          </div>
+
 <a id="more"></a>
 
 <h1 id="Java面向对象三大特性（基础篇）"><a href="#Java面向对象三大特性（基础篇）" class="headerlink" title="Java面向对象三大特性（基础篇）"></a>Java面向对象三大特性（基础篇）</h1><p>面向对象简称 OO（Object Oriented），20 世纪 80 年代以后，有了面向对象分析（OOA）、 面向对象设计（OOD）、面向对象程序设计（OOP）等新的系统开发方式模型的研究。</p>
@@ -1154,7 +1157,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Sublime Text 3 快捷键汇总</title>
-    <url>/2019/02/19/ck333huc0000xe8mkbkzw23mv/</url>
+    <url>/2019/02/19/ck334otn5000ymgmk3ysk95r8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>常用 Sublime Text 3 快捷键。</p>
 <a id="more"></a>
 
@@ -1549,7 +1552,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>一些小众但很有意思的网站：程序员版</title>
-    <url>/2019/02/16/ck333hubt000te8mkav6g2dyl/</url>
+    <url>/2019/02/16/ck334otmx000tmgmk0at53vuz/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>面向程序员的一些精美的小众网站：学习资源或是一些趁手的工具。</p>
 <ul>
 <li><a href="https://www.mydevice.io/" target="_blank" rel="noopener">mydevice.io</a></li>
@@ -1578,7 +1581,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Web页面中引用iconfont图标</title>
-    <url>/2019/01/29/ck333huc90012e8mk11i4b51v/</url>
+    <url>/2019/01/29/ck334otn90012mgmk1ixbebhq/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/iconfont.png!thumbnail" alt="iconfont 首页" title="iconfont 首页"></p>
 <p>阿里妈妈出品的 iconfont 是一个矢量图标管理、交流平台，支持矢量图、位图等格式下载，并提供便捷的前端项目植入引用方法，是当前Web开发中主流的icon解决方案。</p>
 <a id="more"></a>
@@ -1695,7 +1698,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Hexo搭建个人博客系列：部署上线篇</title>
-    <url>/2018/11/20/ck333hubc000je8mkffjcbe7y/</url>
+    <url>/2018/11/20/ck334otmi000jmgmkh5t400hf/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/dolphin.jpg!thumbnail" alt="题图" title="Photo by Felix Hernandez Dreamphography"></p>
 <p>本文主要介绍了在将Hexo博客部署上线过程中将会遇到的一系列问题。</p>
 <p>第一章主要介绍了将 Hexo 部署到 VPS 的方案，使得在本地推送更新后自动同步线上内容，部署过程主要分为三步走，首先从本地推送更新到远程仓库，然后触发 Git Hooks 将静态资源部署到 Web 根目录，最后启动 Nginx 服务器。</p>
@@ -2052,7 +2055,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Hexo搭建个人博客系列：进阶设置篇</title>
-    <url>/2018/11/20/ck333hub9000he8mk2wam6rmb/</url>
+    <url>/2018/11/20/ck334otmf000hmgmkcsv5glsx/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/snow-mountain.jpg!thumbnail" alt="题图" title="Photo by Przemyslaw Kruk"></p>
 <p>本篇文章介绍了如何为Hexo博客集成更多强大的功能。</p>
 <p>第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点PV和PU统计、站点运行时间统计、文章PV统计、站点和文章字数统计等。</p>
@@ -2467,7 +2470,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
 <li>新增文件统一放在 _custom 目录下</li>
 </ul>
 <p>所有以上这些原则，尽管实现起来可能更复杂，需要更多的代码，但都是为了让站点更好维护，更灵活方便。</p>
-<p>本文介绍了如何通过修改自定义设置和集成三方插件服务搭建一个功能更加完善的个性化Hexo博客，尽管我们的博客可能已经做的令自己很满意了，但至今仍是只能在本地访问，别人看不到。我们建立博客往往都是希望能将自己的文章分享给他人来创造更多价值，如果想要了解如何将站点部署到公网，请参考本系列中最后一篇文章：<a href="/2018/11/20/ck333hubc000je8mkffjcbe7y/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a>。</p>
+<p>本文介绍了如何通过修改自定义设置和集成三方插件服务搭建一个功能更加完善的个性化Hexo博客，尽管我们的博客可能已经做的令自己很满意了，但至今仍是只能在本地访问，别人看不到。我们建立博客往往都是希望能将自己的文章分享给他人来创造更多价值，如果想要了解如何将站点部署到公网，请参考本系列中最后一篇文章：<a href="/2018/11/20/ck334otmi000jmgmkh5t400hf/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a>。</p>
 <div class="reference-linking">参考链接</div>
 
 <ul>
@@ -2492,7 +2495,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Hexo搭建个人博客系列：主题美化篇</title>
-    <url>/2018/11/20/ck333hubl000oe8mk1chfb5g5/</url>
+    <url>/2018/11/20/ck334otmq000omgmkelotfd2a/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/coast.jpg!thumbnail" alt="题图" title="Photo by Marina Weishaupt"></p>
 <p>本文介绍了在Next主题的基础上进一步对博客进行美化的方案，主要包括:</p>
 <ul>
@@ -2716,8 +2719,8 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
 <h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>本文记录了本站在Next的基础上的进阶美化方案，除了一些简单的样式修改外，还添加了一些由插件支持的高级动效，包括动态背景、看板娘、边缘摆动、鼠标点击和打字特效等。笔者认为，动效可以使得站点变有趣，但同时也会增加网页的资源消耗，以及影响用户的关注点，有时候会喧宾夺主适得其反，建议珍爱PC资源，合理使用动效。</p>
 <p>本文内容仅涉及到主题美化，也就是说仅使得网页看起来更好看或者更炫酷，但并没有使其功能上变得更强大。如果你希望为站点集成更高级的功能，可以关注本系列的后续文章：</p>
 <ul>
-<li>想要深度定制个性化站点，请参考本系列中的 <a href="/2018/11/20/ck333hub9000he8mk2wam6rmb/" title="Hexo搭建个人博客系列：进阶设置篇">Hexo搭建个人博客系列：进阶设置篇</a>。</li>
-<li>想要了解如何将站点部署到公网，请参考本系列中的 <a href="/2018/11/20/ck333hubc000je8mkffjcbe7y/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a></li>
+<li>想要深度定制个性化站点，请参考本系列中的 <a href="/2018/11/20/ck334otmf000hmgmkcsv5glsx/" title="Hexo搭建个人博客系列：进阶设置篇">Hexo搭建个人博客系列：进阶设置篇</a>。</li>
+<li>想要了解如何将站点部署到公网，请参考本系列中的 <a href="/2018/11/20/ck334otmi000jmgmkh5t400hf/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a></li>
 </ul>
 <div class="reference-linking">参考链接</div>
 
@@ -2741,7 +2744,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Hexo搭建个人博客系列：写作技巧篇</title>
-    <url>/2018/11/20/ck333hubq000re8mk89jh34ex/</url>
+    <url>/2018/11/20/ck334otmv000rmgmk720s61d0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/mist.jpg!thumbnail" alt="题图" title="Photo by Henri Prestes"></p>
 <p>本文介绍Hexo博客的写作技巧。</p>
 <p>第一章中介绍了Hexo中写作相关的基本概念，包括三种基本布局，标签与分类，Markdown写作语法。</p>
@@ -2976,10 +2979,10 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
 
 <p>其中，<code>slug</code> 表示 <code>_post</code> 目录下的Markdown文件名。</p>
 <p><code>post_path</code> 标签将会渲染为文章的地址，即 <code>permalink</code>；而 <code>post_link</code> 标签将会渲染为链接，可以通过 <code>title</code> 指定链接标题。</p>
-<p>如以下标签将会生成 <code>/2018/11/20/ck333hubq000re8mk89jh34ex/</code></p>
+<p>如以下标签将会生成 <code>/2018/11/20/ck334otmv000rmgmk720s61d0/</code></p>
 <figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">post_path</span> hexo-writing-skills %&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p>而以下标签则会生成 <a href="/2018/11/20/ck333hubq000re8mk89jh34ex/" title="链接标题">链接标题</a></p>
+<p>而以下标签则会生成 <a href="/2018/11/20/ck334otmv000rmgmk720s61d0/" title="链接标题">链接标题</a></p>
 <figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">post_link</span> hexo-writing-skills 链接标题 %&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>这种站内引用方式比直接使用url引用的形式更为可靠，因为即使修改了 <code>permalink</code> 格式，或者修改了文章的路由地址，只要Markdown文件名没有发生改变，引用链接都不会失效。</p>
@@ -3087,12 +3090,12 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
 </ul>
 <p>示例效果如下：</p>
 
-        <div id="aplayer-ixotGchu" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-QobDZDPy" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-ixotGchu"),
+            element: document.getElementById("aplayer-QobDZDPy"),
             narrow: false,
             autoplay: false,
             showlrc: 3,
@@ -3404,9 +3407,9 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
 <p><img src="http://yearito-1256884783.image.myqcloud.com/hexo-writing-skills/20181020114433264.png" alt="Dillinger 用户界面" title="Dillinger 用户界面"></p>
 <h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>本文介绍了Hexo博客的几项关键写作技巧，包括Markdown的基本语法，Hexo主题的内置标签等，本文还介绍了如何在文章中利用图床外链插入图片，如何利用Aplayer / Dplayer等音视频播放器插件在页面内插入多媒体元素等，并列举了几款写作工具以供选择，希望你能从中找到用起来最顺手的一款。如果你有更高级的个性化需求，你可以关注本系列的后续几篇文章：</p>
 <ul>
-<li>想要进一步美化主题，添加动效以及交互，请参考本系列中的 <a href="/2018/11/20/ck333hubl000oe8mk1chfb5g5/" title="Hexo搭建个人博客系列：主题美化篇">Hexo搭建个人博客系列：主题美化篇</a>。</li>
-<li>想要深度定制个性化站点，请参考本系列中的 <a href="/2018/11/20/ck333hub9000he8mk2wam6rmb/" title="Hexo搭建个人博客系列：进阶设置篇">Hexo搭建个人博客系列：进阶设置篇</a>。</li>
-<li>想要了解如何将站点部署到公网，请参考本系列中的 <a href="/2018/11/20/ck333hubc000je8mkffjcbe7y/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a></li>
+<li>想要进一步美化主题，添加动效以及交互，请参考本系列中的 <a href="/2018/11/20/ck334otmq000omgmkelotfd2a/" title="Hexo搭建个人博客系列：主题美化篇">Hexo搭建个人博客系列：主题美化篇</a>。</li>
+<li>想要深度定制个性化站点，请参考本系列中的 <a href="/2018/11/20/ck334otmf000hmgmkcsv5glsx/" title="Hexo搭建个人博客系列：进阶设置篇">Hexo搭建个人博客系列：进阶设置篇</a>。</li>
+<li>想要了解如何将站点部署到公网，请参考本系列中的 <a href="/2018/11/20/ck334otmi000jmgmkh5t400hf/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a></li>
 </ul>
 <div class="reference-linking">参考链接</div>
 
@@ -3431,7 +3434,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Hexo搭建个人博客系列：基础建站篇</title>
-    <url>/2018/11/20/ck333hubh000ne8mkd5ml2lnw/</url>
+    <url>/2018/11/20/ck334otmn000nmgmk0awzezy4/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/forest.jpg!thumbnail" alt="题图" title="Photo by Ronald Jansen"></p>
 <p>Hexo是一个高效简洁的静态博客框架，支持Markdown写作语法，插件丰富，主题优雅，部署方便。目前已成为多数人博客建站的选择。</p>
 <p>本文为Hexo搭建个人博客系列中的第一篇。第一章中介绍了如何在本地搭建Hexo博客，第二章中介绍了如何安装使用Next主题，第三章和第四章分别介绍了针对于站点和文章详情页的一些基础优化方案。</p>
@@ -3569,10 +3572,10 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
 
 <p>至此你已经在本地搭建起了Hexo博客，更换到了Next主题，并对站点进行了一些基本的自定义配置，看起来已经是一个可以正常使用的站点了。但可能仅仅这样还无法满足你的高级需求，你可以关注本系列的后续几篇文章，将分别从不同的角度一步步的帮助你搭建一个功能更加强大，界面更加优雅的个人博客站点：</p>
 <ul>
-<li>想要了解和写作有关的语法技巧，请参考本系列中的 <a href="/2018/11/20/ck333hubq000re8mk89jh34ex/" title="Hexo搭建个人博客系列：写作技巧篇">Hexo搭建个人博客系列：写作技巧篇</a>。</li>
+<li>想要了解和写作有关的语法技巧，请参考本系列中的 <a href="/2018/11/20/ck334otmv000rmgmk720s61d0/" title="Hexo搭建个人博客系列：写作技巧篇">Hexo搭建个人博客系列：写作技巧篇</a>。</li>
 <li>想要进一步美化主题，添加动效以及交互，请参考本系列中的 。</li>
-<li>想要深度定制个性化站点，请参考本系列中的 <a href="/2018/11/20/ck333hub9000he8mk2wam6rmb/" title="Hexo搭建个人博客系列：进阶设置篇">Hexo搭建个人博客系列：进阶设置篇</a>。</li>
-<li>想要了解如何将站点部署到公网，请参考本系列中的 <a href="/2018/11/20/ck333hubc000je8mkffjcbe7y/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a></li>
+<li>想要深度定制个性化站点，请参考本系列中的 <a href="/2018/11/20/ck334otmf000hmgmkcsv5glsx/" title="Hexo搭建个人博客系列：进阶设置篇">Hexo搭建个人博客系列：进阶设置篇</a>。</li>
+<li>想要了解如何将站点部署到公网，请参考本系列中的 <a href="/2018/11/20/ck334otmi000jmgmkh5t400hf/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a></li>
 </ul>
 <div class="reference-linking">参考链接</div>
 
@@ -3592,7 +3595,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>序</title>
-    <url>/2018/09/20/ck333huc4000ye8mk23cga4lc/</url>
+    <url>/2018/09/20/ck334otn2000xmgmkc1q96h54/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/elephant.jpg" alt="题图" title="Photo by Emma Kjellstrand"></p>
 <blockquote class="blockquote-center">写作是一个好习惯，深以为然。这是一个回顾、梳理、总结的过程，更是一个重新思考的过程。</blockquote>
 
