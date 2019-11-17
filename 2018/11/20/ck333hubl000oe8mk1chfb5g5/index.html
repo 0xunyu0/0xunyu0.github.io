@@ -14,6 +14,7 @@
 
 <link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -27,7 +28,7 @@
     copycode: {"enable":true,"show_result":true,"style":"mac"},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
     lazyload: false,
     pangu: false,
@@ -54,8 +55,8 @@
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建个人博客系列：主题美化篇">
-<meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;2018&#x2F;11&#x2F;20&#x2F;ck31ryasl000l8cmkaloxh179&#x2F;index.html">
-<meta property="og:site_name" content="Time-C">
+<meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;2018&#x2F;11&#x2F;20&#x2F;ck333hubl000oe8mk1chfb5g5&#x2F;index.html">
+<meta property="og:site_name" content="Time - C">
 <meta property="og:description" content="本文介绍了在Next主题的基础上进一步对博客进行美化的方案，主要包括:  在文章末尾添加结束标记 修改侧边栏的位置到左边 添加不同类型的动态背景效果 添加 live2d 看板娘 为布局元素添加边缘弹性摆动效果 个性化回到顶部按钮 添加不同类型的鼠标点击特效 评论区输入打字礼花特效  读者可以根据需要选择其中喜欢的方案应用到站点博客中。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yearito-1256884783.image.myqcloud.com&#x2F;thumbnails&#x2F;coast.jpg!thumbnail">
@@ -78,7 +79,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yearito-1256884783.image.myqcloud.com&#x2F;thumbnails&#x2F;coast.jpg!thumbnail">
 
-<link rel="canonical" href="https://myblog.iolab.top/2018/11/20/ck31ryasl000l8cmkaloxh179/">
+<link rel="canonical" href="https://myblog.iolab.top/2018/11/20/ck333hubl000oe8mk1chfb5g5/">
 
 
 <script id="page-configurations">
@@ -92,7 +93,7 @@
   };
 </script>
 
-  <title>Hexo搭建个人博客系列：主题美化篇 | Time-C</title>
+  <title>Hexo搭建个人博客系列：主题美化篇 | Time - C</title>
   
 
 
@@ -123,7 +124,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Time-C" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Time - C" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -137,7 +138,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Time-C</span>
+        <span class="site-title">Time - C</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -169,7 +170,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -212,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://myblog.iolab.top/2018/11/20/ck31ryasl000l8cmkaloxh179/">
+    <link itemprop="mainEntityOfPage" href="https://myblog.iolab.top/2018/11/20/ck333hubl000oe8mk1chfb5g5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/me.png">
@@ -221,7 +222,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Time-C">
+      <meta itemprop="name" content="Time - C">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -510,8 +511,8 @@
 <h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>本文记录了本站在Next的基础上的进阶美化方案，除了一些简单的样式修改外，还添加了一些由插件支持的高级动效，包括动态背景、看板娘、边缘摆动、鼠标点击和打字特效等。笔者认为，动效可以使得站点变有趣，但同时也会增加网页的资源消耗，以及影响用户的关注点，有时候会喧宾夺主适得其反，建议珍爱PC资源，合理使用动效。</p>
 <p>本文内容仅涉及到主题美化，也就是说仅使得网页看起来更好看或者更炫酷，但并没有使其功能上变得更强大。如果你希望为站点集成更高级的功能，可以关注本系列的后续文章：</p>
 <ul>
-<li>想要深度定制个性化站点，请参考本系列中的 <a href="/2018/11/20/ck31ryas3000c8cmk1e0ihi47/" title="Hexo搭建个人博客系列：进阶设置篇">Hexo搭建个人博客系列：进阶设置篇</a>。</li>
-<li>想要了解如何将站点部署到公网，请参考本系列中的 <a href="/2018/11/20/ck31ryas8000f8cmk7hnzfa2j/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a></li>
+<li>想要深度定制个性化站点，请参考本系列中的 <a href="/2018/11/20/ck333hub9000he8mk2wam6rmb/" title="Hexo搭建个人博客系列：进阶设置篇">Hexo搭建个人博客系列：进阶设置篇</a>。</li>
+<li>想要了解如何将站点部署到公网，请参考本系列中的 <a href="/2018/11/20/ck333hubc000je8mkffjcbe7y/" title="Hexo搭建个人博客系列：部署上线篇">Hexo搭建个人博客系列：部署上线篇</a></li>
 </ul>
 <div class="reference-linking">参考链接</div>
 
@@ -563,7 +564,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://myblog.iolab.top/2018/11/20/ck31ryasl000l8cmkaloxh179/" title="Hexo搭建个人博客系列：主题美化篇">https://myblog.iolab.top/2018/11/20/ck31ryasl000l8cmkaloxh179/</a>
+    <a href="https://myblog.iolab.top/2018/11/20/ck333hubl000oe8mk1chfb5g5/" title="Hexo搭建个人博客系列：主题美化篇">https://myblog.iolab.top/2018/11/20/ck333hubl000oe8mk1chfb5g5/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -582,7 +583,7 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2018/11/20/ck31ryasn000n8cmkgdpiev2x/" rel="next" title="Hexo搭建个人博客系列：写作技巧篇">
+                <a href="/2018/11/20/ck333hubq000re8mk89jh34ex/" rel="next" title="Hexo搭建个人博客系列：写作技巧篇">
                   <i class="fa fa-chevron-left"></i> Hexo搭建个人博客系列：写作技巧篇
                 </a>
             </div>
@@ -590,7 +591,7 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2018/11/20/ck31ryas3000c8cmk1e0ihi47/" rel="prev" title="Hexo搭建个人博客系列：进阶设置篇">
+                <a href="/2018/11/20/ck333hub9000he8mk2wam6rmb/" rel="prev" title="Hexo搭建个人博客系列：进阶设置篇">
                   Hexo搭建个人博客系列：进阶设置篇 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -647,7 +648,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -719,6 +720,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>

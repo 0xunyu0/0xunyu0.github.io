@@ -14,6 +14,7 @@
 
 <link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -27,7 +28,7 @@
     copycode: {"enable":true,"show_result":true,"style":"mac"},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
     lazyload: false,
     pangu: false,
@@ -50,13 +51,13 @@
   };
 </script>
 
-  <meta name="description" content="本文部分内容来源于网络，为了把本文主题讲得清晰透彻，也整合了很多我认为不错的技术博客内容，引用其中了一些比较好的博客文章，如有侵权，请联系作者。该系列博文会告诉你如何从入门到进阶，一步步地学习Java基础知识，并上手进行实战，接着了解每个Java知识点背后的实现原理，更完整地了解整个Java技术体系，形成自己的知识框架。为了更好地总结和检验你的学习成果，本系列文章也会提供每个知识点对应的面试题以及">
-<meta name="keywords" content="Java">
+  <meta name="description" content="本文部分内容来源于网络，为了把本文主题讲得清晰透彻，也整合了很多我认为不错的技术博客内容，引用了其中一些比较好的博客文章，如有侵权，请联系作者。该系列博文会告诉你如何从入门到进阶，一步步地学习Java基础知识，并上手进行实战，接着了解每个Java知识点背后的实现原理，更完整地了解整个Java技术体系，形成自己的知识框架。为了更好地总结和检验你的学习成果，本系列文章也会提供每个知识点对应的面试题以及">
+<meta name="keywords" content="Java,Java【基础】">
 <meta property="og:type" content="article">
 <meta property="og:title" content="1. Java 面向对象基础">
 <meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;2019&#x2F;11&#x2F;15&#x2F;Java-Object-Base&#x2F;index.html">
-<meta property="og:site_name" content="Time-C">
-<meta property="og:description" content="本文部分内容来源于网络，为了把本文主题讲得清晰透彻，也整合了很多我认为不错的技术博客内容，引用其中了一些比较好的博客文章，如有侵权，请联系作者。该系列博文会告诉你如何从入门到进阶，一步步地学习Java基础知识，并上手进行实战，接着了解每个Java知识点背后的实现原理，更完整地了解整个Java技术体系，形成自己的知识框架。为了更好地总结和检验你的学习成果，本系列文章也会提供每个知识点对应的面试题以及">
+<meta property="og:site_name" content="Time - C">
+<meta property="og:description" content="本文部分内容来源于网络，为了把本文主题讲得清晰透彻，也整合了很多我认为不错的技术博客内容，引用了其中一些比较好的博客文章，如有侵权，请联系作者。该系列博文会告诉你如何从入门到进阶，一步步地学习Java基础知识，并上手进行实战，接着了解每个Java知识点背后的实现原理，更完整地了解整个Java技术体系，形成自己的知识框架。为了更好地总结和检验你的学习成果，本系列文章也会提供每个知识点对应的面试题以及">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;www.runoob.com&#x2F;wp-content&#x2F;uploads&#x2F;2013&#x2F;12&#x2F;14B0951E-FC75-47A3-B611-4E1883887339.jpg">
 <meta property="og:image" content="https:&#x2F;&#x2F;www.runoob.com&#x2F;wp-content&#x2F;uploads&#x2F;2013&#x2F;12&#x2F;dt-java.png">
@@ -96,7 +97,7 @@
   };
 </script>
 
-  <title>1. Java 面向对象基础 | Time-C</title>
+  <title>1. Java 面向对象基础 | Time - C</title>
   
 
 
@@ -127,7 +128,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Time-C" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Time - C" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -141,7 +142,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Time-C</span>
+        <span class="site-title">Time - C</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -173,7 +174,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -225,7 +226,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Time-C">
+      <meta itemprop="name" content="Time - C">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -284,7 +285,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文部分内容来源于网络，为了把本文主题讲得清晰透彻，也整合了很多我认为不错的技术博客内容，引用其中了一些比较好的博客文章，如有侵权，请联系作者。<br>该系列博文会告诉你如何从入门到进阶，一步步地学习Java基础知识，并上手进行实战，接着了解每个Java知识点背后的实现原理，更完整地了解整个Java技术体系，形成自己的知识框架。为了更好地总结和检验你的学习成果，本系列文章也会提供每个知识点对应的面试题以及参考答案。</p>
+        <p>本文部分内容来源于网络，为了把本文主题讲得清晰透彻，也整合了很多我认为不错的技术博客内容，引用了其中一些比较好的博客文章，如有侵权，请联系作者。<br>该系列博文会告诉你如何从入门到进阶，一步步地学习Java基础知识，并上手进行实战，接着了解每个Java知识点背后的实现原理，更完整地了解整个Java技术体系，形成自己的知识框架。为了更好地总结和检验你的学习成果，本系列文章也会提供每个知识点对应的面试题以及参考答案。</p>
 <a id="more"></a>
 
 <h1 id="Java面向对象三大特性（基础篇）"><a href="#Java面向对象三大特性（基础篇）" class="headerlink" title="Java面向对象三大特性（基础篇）"></a>Java面向对象三大特性（基础篇）</h1><p>面向对象简称 OO（Object Oriented），20 世纪 80 年代以后，有了面向对象分析（OOA）、 面向对象设计（OOD）、面向对象程序设计（OOP）等新的系统开发方式模型的研究。</p>
@@ -582,14 +583,15 @@
           
           <div class="post-tags">
               <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/Java%E3%80%90%E5%9F%BA%E7%A1%80%E3%80%91/" rel="tag"><i class="fa fa-tag"></i> Java【基础】</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/15/hexo-one/" rel="next" title="Hexo第一阶段">
-                  <i class="fa fa-chevron-left"></i> Hexo第一阶段
+                <a href="/2019/11/15/Java-Base-Data-Class/" rel="next" title="2. Java 基本数据类型">
+                  <i class="fa fa-chevron-left"></i> 2. Java 基本数据类型
                 </a>
             </div>
 
@@ -653,7 +655,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -725,6 +727,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>

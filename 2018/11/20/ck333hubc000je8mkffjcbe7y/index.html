@@ -14,6 +14,7 @@
 
 <link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 
 <script id="hexo-configurations">
@@ -27,7 +28,7 @@
     copycode: {"enable":true,"show_result":true,"style":"mac"},
     back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
+    fancybox: true,
     mediumzoom: false,
     lazyload: false,
     pangu: false,
@@ -54,8 +55,8 @@
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo搭建个人博客系列：部署上线篇">
-<meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;2018&#x2F;11&#x2F;20&#x2F;ck31ryas8000f8cmk7hnzfa2j&#x2F;index.html">
-<meta property="og:site_name" content="Time-C">
+<meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;2018&#x2F;11&#x2F;20&#x2F;ck333hubc000je8mkffjcbe7y&#x2F;index.html">
+<meta property="og:site_name" content="Time - C">
 <meta property="og:description" content="本文主要介绍了在将Hexo博客部署上线过程中将会遇到的一系列问题。 第一章主要介绍了将 Hexo 部署到 VPS 的方案，使得在本地推送更新后自动同步线上内容，部署过程主要分为三步走，首先从本地推送更新到远程仓库，然后触发 Git Hooks 将静态资源部署到 Web 根目录，最后启动 Nginx 服务器。 第二章主要介绍了如何分析页面加载性能瓶颈，并提供了通过CDN和代码压缩合并等方法来优化页">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http:&#x2F;&#x2F;yearito-1256884783.image.myqcloud.com&#x2F;thumbnails&#x2F;dolphin.jpg!thumbnail">
@@ -78,7 +79,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;yearito-1256884783.image.myqcloud.com&#x2F;thumbnails&#x2F;dolphin.jpg!thumbnail">
 
-<link rel="canonical" href="https://myblog.iolab.top/2018/11/20/ck31ryas8000f8cmk7hnzfa2j/">
+<link rel="canonical" href="https://myblog.iolab.top/2018/11/20/ck333hubc000je8mkffjcbe7y/">
 
 
 <script id="page-configurations">
@@ -92,7 +93,7 @@
   };
 </script>
 
-  <title>Hexo搭建个人博客系列：部署上线篇 | Time-C</title>
+  <title>Hexo搭建个人博客系列：部署上线篇 | Time - C</title>
   
 
 
@@ -123,7 +124,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="Time-C" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Time - C" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -137,7 +138,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Time-C</span>
+        <span class="site-title">Time - C</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -169,7 +170,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">15</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">16</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -212,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://myblog.iolab.top/2018/11/20/ck31ryas8000f8cmk7hnzfa2j/">
+    <link itemprop="mainEntityOfPage" href="https://myblog.iolab.top/2018/11/20/ck333hubc000je8mkffjcbe7y/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/me.png">
@@ -221,7 +222,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Time-C">
+      <meta itemprop="name" content="Time - C">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -671,7 +672,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://myblog.iolab.top/2018/11/20/ck31ryas8000f8cmk7hnzfa2j/" title="Hexo搭建个人博客系列：部署上线篇">https://myblog.iolab.top/2018/11/20/ck31ryas8000f8cmk7hnzfa2j/</a>
+    <a href="https://myblog.iolab.top/2018/11/20/ck333hubc000je8mkffjcbe7y/" title="Hexo搭建个人博客系列：部署上线篇">https://myblog.iolab.top/2018/11/20/ck333hubc000je8mkffjcbe7y/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -690,7 +691,7 @@
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2018/11/20/ck31ryas3000c8cmk1e0ihi47/" rel="next" title="Hexo搭建个人博客系列：进阶设置篇">
+                <a href="/2018/11/20/ck333hub9000he8mk2wam6rmb/" rel="next" title="Hexo搭建个人博客系列：进阶设置篇">
                   <i class="fa fa-chevron-left"></i> Hexo搭建个人博客系列：进阶设置篇
                 </a>
             </div>
@@ -755,7 +756,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-count">16</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -827,6 +828,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script>
