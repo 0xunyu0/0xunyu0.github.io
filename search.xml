@@ -1146,7 +1146,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Sublime Text 3 快捷键汇总</title>
-    <url>/2019/02/19/ck33bhg88000xw4mkdm5sf3c8/</url>
+    <url>/2019/02/19/ck354xtmy000zesmkav84gv2w/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>常用 Sublime Text 3 快捷键。</p>
 <a id="more"></a>
 
@@ -1540,7 +1540,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>一些小众但很有意思的网站：程序员版</title>
-    <url>/2019/02/16/ck33bhg82000qw4mk06q0esf5/</url>
+    <url>/2019/02/16/ck354xtmo000oesmk3n013tue/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>面向程序员的一些精美的小众网站：学习资源或是一些趁手的工具。</p>
 <ul>
 <li><a href="https://www.mydevice.io/" target="_blank" rel="noopener">mydevice.io</a></li>
@@ -1575,7 +1575,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>Web页面中引用iconfont图标</title>
-    <url>/2019/01/29/ck33bhg8a000yw4mkemhk0vy4/</url>
+    <url>/2019/01/29/ck354xtn10012esmkf71cd8bb/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/iconfont.png!thumbnail" alt="iconfont 首页" title="iconfont 首页"></p>
 <p>阿里妈妈出品的 iconfont 是一个矢量图标管理、交流平台，支持矢量图、位图等格式下载，并提供便捷的前端项目植入引用方法，是当前Web开发中主流的icon解决方案。</p>
 <a id="more"></a>
@@ -3079,12 +3079,12 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
 </ul>
 <p>示例效果如下：</p>
 
-        <div id="aplayer-xHGNUNrI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+        <div id="aplayer-jRrXnRBO" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
             <pre class="aplayer-lrc-content"></pre>
         </div>
         <script>
           var ap = new APlayer({
-            element: document.getElementById("aplayer-xHGNUNrI"),
+            element: document.getElementById("aplayer-jRrXnRBO"),
             narrow: false,
             autoplay: false,
             showlrc: 3,
@@ -3583,7 +3583,7 @@ System.out.println(a1 == a3);</code></pre><h3 id="了解基本类型缓存（常
   </entry>
   <entry>
     <title>序</title>
-    <url>/2018/09/20/ck33bhg84000sw4mkdlua4974/</url>
+    <url>/2018/09/20/ck354xtmu000uesmkbf26e368/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="http://yearito-1256884783.image.myqcloud.com/thumbnails/elephant.jpg" alt="题图" title="Photo by Emma Kjellstrand"></p>
 <blockquote class="blockquote-center">写作是一个好习惯，深以为然。这是一个回顾、梳理、总结的过程，更是一个重新思考的过程。</blockquote>
 
