@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myblog.iolab.top/"/>
-  <updated>2019-11-16T13:36:08.000Z</updated>
+  <updated>2019-11-19T10:26:47.000Z</updated>
   <id>https://myblog.iolab.top/</id>
   
   <author>
@@ -17,180 +17,63 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>1. Java 面向对象基础</title>
-    <link href="https://myblog.iolab.top/2019/11/15/Java-Object-Base/"/>
-    <id>https://myblog.iolab.top/2019/11/15/Java-Object-Base/</id>
-    <published>2019-11-15T13:36:08.000Z</published>
-    <updated>2019-11-16T13:36:08.000Z</updated>
+    <title>第一章 Java 入门基础及环境搭建</title>
+    <link href="https://myblog.iolab.top/java-Introduction-foundation-and-environment-construction/"/>
+    <id>https://myblog.iolab.top/java-Introduction-foundation-and-environment-construction/</id>
+    <published>2019-11-19T10:26:47.000Z</published>
+    <updated>2019-11-19T10:26:47.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;为了更好的构建知识框架，这里归档的信息部分内容引用于来源于网络，如有侵权，请联系作者。&lt;/p&gt;
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;第一章 Java 入门基础及环境搭建&lt;/p&gt;
+          &lt;/div&gt;
     
     </summary>
     
     
-      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+      <category term="java" scheme="https://myblog.iolab.top/categories/java/"/>
     
-      <category term="Java【基础】" scheme="https://myblog.iolab.top/categories/Java/Java%E3%80%90%E5%9F%BA%E7%A1%80%E3%80%91/"/>
+      <category term="java基础教程" scheme="https://myblog.iolab.top/categories/java/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+      <category term="java" scheme="https://myblog.iolab.top/tags/java/"/>
     
-      <category term="Java【基础】" scheme="https://myblog.iolab.top/tags/Java%E3%80%90%E5%9F%BA%E7%A1%80%E3%80%91/"/>
+      <category term="java基础教程" scheme="https://myblog.iolab.top/tags/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title>10.Java异常</title>
-    <link href="https://myblog.iolab.top/2019/11/15/Java-Abnormal/"/>
-    <id>https://myblog.iolab.top/2019/11/15/Java-Abnormal/</id>
-    <published>2019-11-15T13:36:08.000Z</published>
-    <updated>2019-11-15T13:36:08.000Z</updated>
+    <title>java [基础] 教程</title>
+    <link href="https://myblog.iolab.top/java-base-contents/"/>
+    <id>https://myblog.iolab.top/java-base-contents/</id>
+    <published>2019-11-19T10:26:47.000Z</published>
+    <updated>2019-11-19T10:26:47.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本文部分内容来源于网络，为了把本文主题讲得清晰透彻，也整合了很多我认为不错的技术博客内容，引用其中了一些比较好的博客文章，如有侵权，请联系作者。&lt;br&gt;该系列博文会告诉你如何从入门到进阶，一步步地学习Java基础知识，并上手进行实战，接着了解每个Java知识点背后的实现原理，更完整地了解整个Java技术体系，形成自己的知识框架。为了更好地总结和检验你的学习成果，本系列文章也会提供每个知识点对应的面试题以及参考答案。&lt;/p&gt;
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;这套教程适用于没有任何 Java 基础，或者基础薄弱的学员，它通俗易懂，并且非常全面，30 天从入门到精通不是神话。（这里是 java [基础] 教程目录页）&lt;/p&gt;
+          &lt;/div&gt;
     
     </summary>
     
     
-      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+      <category term="java" scheme="https://myblog.iolab.top/categories/java/"/>
     
-      <category term="Java【基础】" scheme="https://myblog.iolab.top/categories/Java/Java%E3%80%90%E5%9F%BA%E7%A1%80%E3%80%91/"/>
-    
-    
-      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
-    
-      <category term="Java【基础】" scheme="https://myblog.iolab.top/tags/Java%E3%80%90%E5%9F%BA%E7%A1%80%E3%80%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2. Java 基本数据类型</title>
-    <link href="https://myblog.iolab.top/2019/11/15/Java-Base-Data-Class/"/>
-    <id>https://myblog.iolab.top/2019/11/15/Java-Base-Data-Class/</id>
-    <published>2019-11-15T13:36:08.000Z</published>
-    <updated>2019-11-15T13:36:08.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;变量就是申请内存来存储值。也就是说，当创建变量的时候，需要在内存中申请空间。&lt;/p&gt;
-    
-    </summary>
+      <category term="java基础教程" scheme="https://myblog.iolab.top/categories/java/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+      <category term="java" scheme="https://myblog.iolab.top/tags/java/"/>
     
-      <category term="Java【基础】" scheme="https://myblog.iolab.top/categories/Java/Java%E3%80%90%E5%9F%BA%E7%A1%80%E3%80%91/"/>
-    
-    
-      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
-    
-      <category term="Java【基础】" scheme="https://myblog.iolab.top/tags/Java%E3%80%90%E5%9F%BA%E7%A1%80%E3%80%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sublime Text 3 快捷键汇总</title>
-    <link href="https://myblog.iolab.top/2019/02/19/ck354xtmy000zesmkav84gv2w/"/>
-    <id>https://myblog.iolab.top/2019/02/19/ck354xtmy000zesmkav84gv2w/</id>
-    <published>2019-02-19T15:52:09.000Z</published>
-    <updated>2019-11-17T18:08:16.302Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;常用 Sublime Text 3 快捷键。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Sublime Text 3" scheme="https://myblog.iolab.top/categories/Sublime-Text-3/"/>
-    
-    
-      <category term="Sublime Text 3" scheme="https://myblog.iolab.top/tags/Sublime-Text-3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一些小众但很有意思的网站：程序员版</title>
-    <link href="https://myblog.iolab.top/2019/02/16/ck354xtmo000oesmk3n013tue/"/>
-    <id>https://myblog.iolab.top/2019/02/16/ck354xtmo000oesmk3n013tue/</id>
-    <published>2019-02-16T11:24:39.000Z</published>
-    <updated>2019-11-17T18:10:12.834Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;面向程序员的一些精美的小众网站：学习资源或是一些趁手的工具。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mydevice.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;mydevice.io&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://regexr.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;RegExr&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://flexboxfroggy.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Flexbox Froggy&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cssgridgarden.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Grid Garden&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Flexbox Playground&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://visualgo.net/en&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;VisuAlgo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;持续收录中…&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="未分类" scheme="https://myblog.iolab.top/categories/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-    
-      <category term="未分类" scheme="https://myblog.iolab.top/tags/%E6%9C%AA%E5%88%86%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web页面中引用iconfont图标</title>
-    <link href="https://myblog.iolab.top/2019/01/29/ck354xtn10012esmkf71cd8bb/"/>
-    <id>https://myblog.iolab.top/2019/01/29/ck354xtn10012esmkf71cd8bb/</id>
-    <published>2019-01-29T05:06:04.000Z</published>
-    <updated>2019-11-17T18:07:30.301Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://yearito-1256884783.image.myqcloud.com/thumbnails/iconfont.png!thumbnail&quot; alt=&quot;iconfont 首页&quot; title=&quot;iconfont 首页&quot;&gt;&lt;/p&gt;
-&lt;p&gt;阿里妈妈出品的 iconfont 是一个矢量图标管理、交流平台，支持矢量图、位图等格式下载，并提供便捷的前端项目植入引用方法，是当前Web开发中主流的icon解决方案。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="iconfont" scheme="https://myblog.iolab.top/categories/iconfont/"/>
-    
-    
-      <category term="iconfont" scheme="https://myblog.iolab.top/tags/iconfont/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用的Git命令及其应用场景</title>
-    <link href="https://myblog.iolab.top/2019/01/16/frequently-used-git-command/"/>
-    <id>https://myblog.iolab.top/2019/01/16/frequently-used-git-command/</id>
-    <published>2019-01-16T07:12:15.000Z</published>
-    <updated>2019-11-15T15:28:45.798Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/2019/01/16/frequently-used-git-command/room-setting.jpg&quot; alt=&quot;题图&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Git GUI 客户端和众多IDE都已经通过图形化的操作方式集成了Git的常用功能，但作为程序员，还是应该通过命令行解决问题，知其然，知其所以然。&lt;/p&gt;
-&lt;p&gt;本文基于简单应用场景储备Git命令，持续更新…&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Git" scheme="https://myblog.iolab.top/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="https://myblog.iolab.top/tags/Git/"/>
+      <category term="java基础教程" scheme="https://myblog.iolab.top/tags/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Hexo搭建个人博客系列：部署上线篇</title>
-    <link href="https://myblog.iolab.top/2018/11/20/hexo-deploy-to-VPS/"/>
-    <id>https://myblog.iolab.top/2018/11/20/hexo-deploy-to-VPS/</id>
+    <link href="https://myblog.iolab.top/hexo-deploy-to-VPS/"/>
+    <id>https://myblog.iolab.top/hexo-deploy-to-VPS/</id>
     <published>2018-11-20T12:09:55.000Z</published>
     <updated>2019-11-17T17:48:01.110Z</updated>
     
@@ -214,8 +97,8 @@
   
   <entry>
     <title>Hexo搭建个人博客系列：进阶设置篇</title>
-    <link href="https://myblog.iolab.top/2018/11/20/hexo-advanced-settings/"/>
-    <id>https://myblog.iolab.top/2018/11/20/hexo-advanced-settings/</id>
+    <link href="https://myblog.iolab.top/hexo-advanced-settings/"/>
+    <id>https://myblog.iolab.top/hexo-advanced-settings/</id>
     <published>2018-11-20T12:09:54.000Z</published>
     <updated>2019-11-17T17:51:52.296Z</updated>
     
@@ -238,8 +121,8 @@
   
   <entry>
     <title>Hexo搭建个人博客系列：主题美化篇</title>
-    <link href="https://myblog.iolab.top/2018/11/20/hexo-theme-beautiful/"/>
-    <id>https://myblog.iolab.top/2018/11/20/hexo-theme-beautiful/</id>
+    <link href="https://myblog.iolab.top/hexo-theme-beautiful/"/>
+    <id>https://myblog.iolab.top/hexo-theme-beautiful/</id>
     <published>2018-11-20T12:09:53.000Z</published>
     <updated>2019-11-17T17:48:43.391Z</updated>
     
@@ -270,8 +153,8 @@
   
   <entry>
     <title>Hexo搭建个人博客系列：写作技巧篇</title>
-    <link href="https://myblog.iolab.top/2018/11/20/hexo-whirting-skills/"/>
-    <id>https://myblog.iolab.top/2018/11/20/hexo-whirting-skills/</id>
+    <link href="https://myblog.iolab.top/hexo-whirting-skills/"/>
+    <id>https://myblog.iolab.top/hexo-whirting-skills/</id>
     <published>2018-11-20T12:09:52.000Z</published>
     <updated>2019-11-17T17:49:36.009Z</updated>
     
@@ -295,8 +178,8 @@
   
   <entry>
     <title>Hexo搭建个人博客系列：基础建站篇</title>
-    <link href="https://myblog.iolab.top/2018/11/20/hexo-get-started/"/>
-    <id>https://myblog.iolab.top/2018/11/20/hexo-get-started/</id>
+    <link href="https://myblog.iolab.top/hexo-get-started/"/>
+    <id>https://myblog.iolab.top/hexo-get-started/</id>
     <published>2018-11-20T12:09:51.000Z</published>
     <updated>2019-11-15T13:36:08.000Z</updated>
     
@@ -311,78 +194,6 @@
     
     
       <category term="Hexo" scheme="https://myblog.iolab.top/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>序</title>
-    <link href="https://myblog.iolab.top/2018/09/20/ck354xtmu000uesmkbf26e368/"/>
-    <id>https://myblog.iolab.top/2018/09/20/ck354xtmu000uesmkbf26e368/</id>
-    <published>2018-09-20T15:16:09.000Z</published>
-    <updated>2019-11-17T18:11:37.680Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://yearito-1256884783.image.myqcloud.com/thumbnails/elephant.jpg&quot; alt=&quot;题图&quot; title=&quot;Photo by Emma Kjellstrand&quot;&gt;&lt;/p&gt;
-&lt;blockquote class=&quot;blockquote-center&quot;&gt;写作是一个好习惯，深以为然。这是一个回顾、梳理、总结的过程，更是一个重新思考的过程。&lt;/blockquote&gt;
-
-&lt;p&gt;第一次看到Next主题的Hexo博客，就被它极致的简洁所吸引，那时就曾想，以后一定要自己搭建一个博客，寻找一方净土，记录生活感悟和技术成长，今日终如愿。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="生活" scheme="https://myblog.iolab.top/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="生活" scheme="https://myblog.iolab.top/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机网络学习总结</title>
-    <link href="https://myblog.iolab.top/2018/07/09/Computer-network-learning-summary/"/>
-    <id>https://myblog.iolab.top/2018/07/09/Computer-network-learning-summary/</id>
-    <published>2018-07-09T14:32:57.000Z</published>
-    <updated>2019-11-17T18:10:59.810Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这部分内容主要是基于一些关于计算机网络基础的学习总结，内容不全面，只讲述了其中的一小部分，后续会再补充，如有错误，还请见谅。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="计算机网络" scheme="https://myblog.iolab.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-    
-      <category term="计算机网络" scheme="https://myblog.iolab.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>知识体系</title>
-    <link href="https://myblog.iolab.top/2017/05/27/Study-Map-One/"/>
-    <id>https://myblog.iolab.top/2017/05/27/Study-Map-One/</id>
-    <published>2017-05-27T05:47:40.000Z</published>
-    <updated>2019-11-17T18:09:08.391Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="知识体系Map" scheme="https://myblog.iolab.top/categories/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BBMap/"/>
-    
-    
-      <category term="知识体系Map" scheme="https://myblog.iolab.top/tags/%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BBMap/"/>
     
   </entry>
   
