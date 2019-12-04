@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Java 支持两种选择语句：if 语句和 switch 语句。其中 if 语句使用布尔表达式或布尔值作为分支条件来进行分支控制，而 switch 语句则用于对多个整型值进行匹配，从而实现分支控制。这些语句允许你只有在程序运行时才能知道其状态的情况下，控制程序的执行过程。如果你没有 C&#x2F;C++ 的编程背景，你将会为这两个语句的强大功能和灵活性而感到吃惊。">
+<meta name="keywords" content="Java,Java基础教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第 2 节 Java if else 分支结构">
+<meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-3-2&#x2F;index.html">
+<meta property="og:site_name" content="Time - C">
+<meta property="og:description" content="Java 支持两种选择语句：if 语句和 switch 语句。其中 if 语句使用布尔表达式或布尔值作为分支条件来进行分支控制，而 switch 语句则用于对多个整型值进行匹配，从而实现分支控制。这些语句允许你只有在程序运行时才能知道其状态的情况下，控制程序的执行过程。如果你没有 C&#x2F;C++ 的编程背景，你将会为这两个语句的强大功能和灵活性而感到吃惊。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-3-2&#x2F;java-base-course-3-2-1.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-3-2&#x2F;java-base-course-3-2-2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-3-2&#x2F;java-base-course-3-2-3.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-3-2&#x2F;java-base-course-3-2-4.jpg">
+<meta property="og:updated_time" content="2019-10-13T12:26:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-3-2&#x2F;java-base-course-3-2-1.jpg">
+
+<link rel="canonical" href="https://myblog.iolab.top/java-base-course-3-2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>第 2 节 Java if else 分支结构 | Time - C</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Time - C" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Time - C</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Time - Container</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-java">
+
+    <a href="/Java/" rel="section"><i class="fa fa-fw fa-send"></i>Java</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/0xunyu0" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://myblog.iolab.top/java-base-course-3-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.png">
+      <meta itemprop="name" content="staySample">
+      <meta itemprop="description" content="保持简单 保持持续">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Time - C">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          第 2 节 Java if else 分支结构
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-13 20:26:47" itemprop="dateCreated datePublished" datetime="2019-10-13T20:26:47+08:00">2019-10-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础教程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Java 支持两种选择语句：if 语句和 switch 语句。其中 if 语句使用布尔表达式或布尔值作为分支条件来进行分支控制，而 switch 语句则用于对多个整型值进行匹配，从而实现分支控制。这些语句允许你只有在程序运行时才能知道其状态的情况下，控制程序的执行过程。如果你没有 C/C++ 的编程背景，你将会为这两个语句的强大功能和灵活性而感到吃惊。</p><a id="more"></a>
+<p>选择结构（也叫分支结构）解决了顺序结构不能判断的缺点，可以根据一个条件判断执行哪些语句块。选择结构适合于带有逻辑或关系比较等条件判断的计算。例如，判断是否到下班时间，判断两个数的大小等。</p>
+<p>由于篇幅有限，本节主要介绍 if 语句的各种形式和用法。关于 switch 语句的用法将会在《Java switch case》一节中讲解。</p>
+<h2 id="if-结构"><a href="#if-结构" class="headerlink" title="if 结构"></a>if 结构</h2><p>if 语句是使用最多的条件分支结构，它属于选择语句，也可以称为条件语句。</p>
+<p>if 选择结构是根据条件判断之后再做处理的一种语法结构。默认情况下，if 语句控制着下方紧跟的一条语句的执行。不过，通过语句块，if 语句可以控制多个语句。</p>
+<p>if 语句的最简语法格式如下，表示“如果满足某种条件，就进行某种处理”。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (条件表达式) &#123;</span><br><span class="line">    语句块;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中“条件表达式”和“语句块”是比较重要的两个地方。<br>1.<code>条件表达式</code>：条件表达式可以是任意一种逻辑表达式，最后返回的结果必须是一个布尔值。取值可以是一个单纯的布尔变量或常量，也可以是使用关系或布尔运算符的表达式。如果条件为真，那么执行语句块；如果条件为假，则语句块将被绕过而不被执行。<br>2.<code>语句块</code>：该语句块可以是一条语句也可以是多条语句。如果仅有一条语句，可省略条件语句中的大括号 {}。但从编程规范角度考虑不要省略大括号，省略大括号会使程序的可读性变差。</p>
+<p>if 条件语句的运行流程如图 1 所示。</p>
+<p><img src="/java-base-course-3-2/java-base-course-3-2-1.jpg" alt="图1  if 语句执行流程图"></p>
+<p><strong>例 1</strong></p>
+<p>编写一个 Java 程序，允许用户从键盘输入一个数字，再判断该数是否大于 100。使用 if 语句的实现代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"请输入一个数字："</span>);</span><br><span class="line">    Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> num = input.nextInt(); <span class="comment">// 接收键盘输入的数据</span></span><br><span class="line">    <span class="comment">// 判断用户输入的数据是否大于100</span></span><br><span class="line">    <span class="keyword">if</span> (num &gt; <span class="number">100</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">"输入的数字大于100"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 判断用户输入的数据是否等于100</span></span><br><span class="line">    <span class="keyword">if</span> (num == <span class="number">100</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">"输入的数字等于100"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 判断用户输入的数据是否小于100</span></span><br><span class="line">    <span class="keyword">if</span> (num &lt; <span class="number">100</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">"输入的数字小于100"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行该程序，分别使用键盘输入 99、100 和 105，结果如下所示：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：</span><br><span class="line"><span class="number">99</span></span><br><span class="line">输入的数字小于<span class="number">100</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：</span><br><span class="line"><span class="number">100</span></span><br><span class="line">输入的数字等于<span class="number">100</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入一个数字：</span><br><span class="line"><span class="number">105</span></span><br><span class="line">输入的数字大于<span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>例 2</strong></p>
+<p>假设有 num1 和 num2 两个变量，它们的值分别是 50 和 34。下面编写程序，要求使用 if 语句判断 num1 和 num2 的大小关系，并输出比较结果。</p>
+<p>实现代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num1 = <span class="number">50</span>;</span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">34</span>;</span><br><span class="line">    <span class="keyword">if</span> (num1 &gt; num2) &#123;</span><br><span class="line">        System.out.println(<span class="string">"num1大于num2"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (num1 == num2) &#123;</span><br><span class="line">        System.out.println(<span class="string">"num2等于num2"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (num1 &lt; num2) &#123;</span><br><span class="line">        System.out.println(<span class="string">"num1小于num2"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该段选择语句判断了 num1 值和 num2 值的大于、等于和小于关系。此处 num1 为 50，num2 为 34，所以执行后会输出“num1 大于 num2”。</p>
+<p><strong>例 3</strong></p>
+<p>在上述两个案例代码中，由于每个 if 语句的语句块中只包含一条语句，所以省略了大括号。本实例在登录系统中要求用户名、密码和验证码都必须正确，否则将显示登录失败及错误提示。其中的语句块有多条语句，所以需要使用大括号。代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String username = <span class="string">"admin"</span>; <span class="comment">// 用户名</span></span><br><span class="line">    String userpass = <span class="string">"123456"</span>; <span class="comment">// 密码</span></span><br><span class="line">    String code = <span class="string">"0000"</span>; <span class="comment">// 验证码</span></span><br><span class="line">    <span class="keyword">if</span> (username != <span class="string">"admin"</span> &amp;&amp; userpass != <span class="string">"123456"</span> &amp;&amp; code != <span class="string">"0000"</span>) &#123;</span><br><span class="line">        System.out.println(<span class="string">"登录失败！"</span>);</span><br><span class="line">        System.out.println(<span class="string">"请检查输入的用户名、密码和验证码是否正确！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在这里为 if 语句设置了一个复杂的复合表达式来验证登录条件。执行后的输出结果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">登录失败！</span><br><span class="line">请检查输入的用户名、密码和验证码是否正确！</span><br></pre></td></tr></table></figure>
+
+<h2 id="if-else-结构"><a href="#if-else-结构" class="headerlink" title="if-else 结构"></a>if-else 结构</h2><p>单 if 语句仅能在满足条件时使用，而无法执行任何其他操作（停止）。而结合 else 语句的 if 可以定义两个操作，此时的 if…else 语句表示<span class="label success">“如果条件正确则执行一个操作，否则执行另一个操作”</span>。</p>
+<p>使用 if…else 语句的语法格式如下所示：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (表达式) &#123;</span><br><span class="line">    语句块<span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    语句块<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在上述语法格式中，如果 if 关键字后面的表达式成立，那么就执行语句块 1，否则的话则执行语句块 2，其运行流程如图 2 所示。</p>
+<p><img src="/java-base-course-3-2/java-base-course-3-2-2.jpg" alt="图2  if…else 运行流程图"></p>
+<p><strong>例 4</strong></p>
+<p>在例 3 中为实现比较 num1 和 num2 的大小，使用了 3 个 if 条件语句分别判断大于、等于和小于的情况。下面使用 if…else 双条件来实现，具体代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num1 = <span class="number">50</span>;</span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">34</span>;</span><br><span class="line">    <span class="comment">// 如果num1等于num2</span></span><br><span class="line">    <span class="keyword">if</span> (num1 == num2) &#123;</span><br><span class="line">        System.out.println(<span class="string">"num1等于num2"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 如果num1大于num2</span></span><br><span class="line">    <span class="keyword">if</span> (num1 &gt; num2) &#123;</span><br><span class="line">        System.out.println(<span class="string">"num1大于num2"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="comment">// 否则就是num1小于num2</span></span><br><span class="line">        System.out.println(<span class="string">"num1小于num2"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>双条件语句减少了代码的编写量，同时增强了程序的可读性。简化后的结果还是一样，执行后会输出“num1 大于 num2”。</p>
+<h2 id="if…else-if-多分支语句"><a href="#if…else-if-多分支语句" class="headerlink" title="if…else if 多分支语句"></a>if…else if 多分支语句</h2><p>if 语句的主要功能是给程序提供一个分支。然而，有时候程序中仅仅多一个分支是远远不够的，甚至有时候程序的分支会很复杂，这就需要使用多分支的 if…else if 语句。</p>
+<p>通常表现为<span class="label success">“如果满足某种条件，就进行某种处理，否则如果满足另一种条件就执行另一种处理……，这些条件都不满足则执行最后一种处理”</span>。</p>
+<p>if…else if 多分支语句的语法格式如下所示：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>) &#123;</span><br><span class="line">    语句块<span class="number">1</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">2</span>) &#123;</span><br><span class="line">    语句块<span class="number">2</span>;</span><br><span class="line">...</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span>(表达式n) &#123;</span><br><span class="line">    语句块n;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    语句块n+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看出，else-if 结构实际上是 if-else 结构的多层嵌套。明显的特点就是在多个分支中只执行一个语句块，而其他分支都不执行，所以这种结构可以用于有多种判断结果的分支中。</p>
+<p>在使用 if…else if 语句时，依次判断表达式的值，当某个分支的条件表达式的值为 true 时，则执行该分支对应的语句块，然后跳到整个 if 语句之外继续执行程序。如果所有的表达式均为 false，则执行语句块 n+1，然后继续执行后续程序，其运行流程如图 3 所示。</p>
+<p><img src="/java-base-course-3-2/java-base-course-3-2-3.jpg" alt="图3  if…else if 语句的执行流程图"></p>
+<p><strong>例 5</strong></p>
+<p>同样以比较 num1 和 num2 的大小为例，使用 if…else if 多条件的实现代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num1 = <span class="number">50</span>;</span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">34</span>;</span><br><span class="line">    <span class="keyword">if</span> (num1 == num2) &#123; <span class="comment">// 如果num1等于num2</span></span><br><span class="line">        System.out.println(<span class="string">"num1等于num2"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (num1 &gt; num2) &#123; <span class="comment">// 如果num1大于num2</span></span><br><span class="line">        System.out.println(<span class="string">"num1大于num2"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// 否则就是小于</span></span><br><span class="line">        System.out.println(<span class="string">"num1小于num2"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上述代码所示，num1 和 num2 不满足 if 语句的“num1==num2”条件，接着测试 else if 的“num1&gt;num2”条件，满足该条件并输出“num1 大于 num2”。</p>
+<p><strong>例 6</strong></p>
+<p>假设某学校对成绩的判断标准是：不低于 90，可以评为优秀；低于 90 但不低于 80，可以评为良好；低于 80 但不低于 60，可以评为中等；否则评为差。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"请输入考试成绩："</span>);</span><br><span class="line">    Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> score = input.nextInt(); <span class="comment">// 接收键盘输入的数据</span></span><br><span class="line">    <span class="keyword">if</span> (score &gt;= <span class="number">90</span>) &#123; <span class="comment">// 考试成绩&gt;=90</span></span><br><span class="line">        System.out.println(<span class="string">"成绩优秀"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (score &gt;= <span class="number">80</span>) &#123; <span class="comment">// 90&gt;考试成绩&gt;=80</span></span><br><span class="line">        System.out.println(<span class="string">"成绩良好"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (score &gt;= <span class="number">60</span>) &#123; <span class="comment">// 80&gt;考试成绩&gt;=60</span></span><br><span class="line">        System.out.println(<span class="string">"成绩中等"</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// 考试成绩&lt;60</span></span><br><span class="line">        System.out.println(<span class="string">"成绩差"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当考试成绩在 [90 ~ 100] 分时，则执行第一个 if 语句，下面的 3 个条件判断语句不会执行；当考试成绩在 [80 ~ 90) 分时，则执行第一个 else if 语句；当考试成绩在 [60 ~ 80)分时，则执行第二个 else if 语句；如果上述 3 个条件都不满足，则执行 else 语句。</p>
+<p>程序运行后的输出效果如下所示：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入考试成绩：</span><br><span class="line"><span class="number">100</span></span><br><span class="line">成绩优秀</span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入考试成绩：</span><br><span class="line"><span class="number">88</span></span><br><span class="line">成绩良好</span><br></pre></td></tr></table></figure>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">请输入考试成绩：</span><br><span class="line"><span class="number">50</span></span><br><span class="line">成绩差</span><br></pre></td></tr></table></figure>
+
+<h2 id="嵌套-if-的使用"><a href="#嵌套-if-的使用" class="headerlink" title="嵌套 if 的使用"></a>嵌套 if 的使用</h2><p>if 语句的用法非常灵活，不仅可以单独使用，还可以在 if 语句里嵌套另一个 if 语句。同样，if…else 语句和 if…else if 语句中也可以嵌套另一个 if 结构的语句，以完成更深层次的判断。</p>
+<p>嵌套 if 的语法格式如下：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式<span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(表达式<span class="number">2</span>) &#123;</span><br><span class="line">        语句块<span class="number">1</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        语句块<span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(表达式<span class="number">3</span>) &#123;</span><br><span class="line">        语句块<span class="number">3</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(表达式<span class="number">4</span>) &#123;</span><br><span class="line">        语句块<span class="number">4</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(表达式n) &#123;</span><br><span class="line">            语句块n;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            语句块n+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在上述格式中，应该注意每一条 else 与离它最近且没有与其他 else 对应的 if 相搭配，其执行流程如图 4 所示。</p>
+<p><img src="/java-base-course-3-2/java-base-course-3-2-4.jpg" alt="图4  嵌套 if 语句执行流程图"></p>
+<p><strong>例 7</strong></p>
+<p>假设某航空公司为吸引更多的顾客推出了优惠活动。原来的飞机票价为 60000 元，活动时，4~11 月旺季，头等舱 9 折，经济舱 8 折；1~3 月、12 月淡季，头等舱 5 折，经济舱 4 折，求机票的价格。</p>
+<p>编写 Java 程序实现代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">"请输入出行的月份："</span>);</span><br><span class="line">        <span class="keyword">int</span> month = sc.nextInt();</span><br><span class="line">        System.out.println(<span class="string">"选择头等舱还是经济舱？数字1为头等舱，数字2为经济舱"</span>);</span><br><span class="line">        <span class="keyword">int</span> kind = sc.nextInt();</span><br><span class="line">        <span class="keyword">double</span> result = <span class="number">60000</span>; <span class="comment">// 原始价格</span></span><br><span class="line">        <span class="comment">// 旺季的票价计算</span></span><br><span class="line">        <span class="keyword">if</span> (month &lt;= <span class="number">11</span> &amp;&amp; month &gt;= <span class="number">4</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (kind == <span class="number">1</span>) &#123; <span class="comment">// 旺季头等舱</span></span><br><span class="line">                result = result * <span class="number">0.9</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (kind == <span class="number">2</span>) &#123; <span class="comment">// 旺季经济舱</span></span><br><span class="line">                result = result * <span class="number">0.8</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">"选择种类有误，请重新输入！"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 淡季的票价计算</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ((month &gt;= <span class="number">1</span> &amp;&amp; month &lt;= <span class="number">3</span>) || month == <span class="number">12</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (kind == <span class="number">1</span>) &#123; <span class="comment">// 淡季头等舱</span></span><br><span class="line">                result = result * <span class="number">0.5</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (kind == <span class="number">2</span>) &#123; <span class="comment">// 淡季经济舱</span></span><br><span class="line">                result = result * <span class="number">0.4</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">"选择种类有误，请重新输入！"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"日期选择有误，请重新输入！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"您选择的机票价格为："</span> + result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码将用户输入的月份保存到 month 变量，将机票种类保存到 kind 变量。接下来判断变量 month 和 kind 的范围。如果变量 month 在 4~11，kind 为 1 则执行 result=result<em>0.9，为 2 则执行 result=result</em>0.8；变量 month 在 1~3、12，kind 为 1 则执行 result=result<em>0.5，为 2 则执行 result=result</em>0.4。当用户输入有误时，根据错误情况给予不同的提示。</p>
+<p>旺季经济舱出行的输出结果如下所示：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请输入出行的月份：</span><br><span class="line"><span class="number">6</span></span><br><span class="line">选择头等舱还是经济舱？数字<span class="number">1</span>为头等舱，数字<span class="number">2</span>为经济舱</span><br><span class="line"><span class="number">2</span></span><br><span class="line">您选择的机票价格为：<span class="number">48000.0</span></span><br></pre></td></tr></table></figure>
+
+<p>淡季头等舱的输出结果如下所示：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">请输入出行的月份：</span><br><span class="line"><span class="number">2</span></span><br><span class="line">选择头等舱还是经济舱？数字<span class="number">1</span>为头等舱，数字<span class="number">2</span>为经济舱</span><br><span class="line"><span class="number">1</span></span><br><span class="line">您选择的机票价格为：<span class="number">30000.0</span></span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+
+    
+    
+    
+
+    <div>
+  	  
+  	    <div>
+	
+		<div style="text-align:center;color:#bfbfbf;font-size:16px;">
+			<span>-------- 本文结束 </span>
+			<i class="fa fa-paw"></i>
+			<span> 感谢阅读 --------</span>
+		</div>
+	
+</div>
+  	  
+  	</div>
+      
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>staySample
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://myblog.iolab.top/java-base-course-3-2/" title="第 2 节 Java if else 分支结构">https://myblog.iolab.top/java-base-course-3-2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> Java基础教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/java-base-course-3-3/" rel="next" title="第 3 节 Java switch case 语句">
+                  <i class="fa fa-chevron-left"></i> 第 3 节 Java switch case 语句
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/java-base-course-3-15/" rel="prev" title="第 15 节 Java 选择结构和循环结构的总结">
+                  第 15 节 Java 选择结构和循环结构的总结 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#if-结构"><span class="nav-number">1.</span> <span class="nav-text">if 结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if-else-结构"><span class="nav-number">2.</span> <span class="nav-text">if-else 结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if…else-if-多分支语句"><span class="nav-number">3.</span> <span class="nav-text">if…else if 多分支语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#嵌套-if-的使用"><span class="nav-number">4.</span> <span class="nav-text">嵌套 if 的使用</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="staySample"
+    src="/images/me.png">
+  <p class="site-author-name" itemprop="name">staySample</p>
+  <div class="site-description" itemprop="description">保持简单 保持持续</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-users"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">T-Cloud Data Studio</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

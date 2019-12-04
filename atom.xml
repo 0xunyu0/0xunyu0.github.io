@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myblog.iolab.top/"/>
-  <updated>2019-11-19T10:26:47.000Z</updated>
+  <updated>2019-10-25T12:26:47.000Z</updated>
   <id>https://myblog.iolab.top/</id>
   
   <author>
@@ -17,183 +17,522 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>第一章 Java 入门基础及环境搭建</title>
-    <link href="https://myblog.iolab.top/java-Introduction-foundation-and-environment-construction/"/>
-    <id>https://myblog.iolab.top/java-Introduction-foundation-and-environment-construction/</id>
-    <published>2019-11-19T10:26:47.000Z</published>
-    <updated>2019-11-19T10:26:47.000Z</updated>
+    <title>第 15 章 Java 网络编程</title>
+    <link href="https://myblog.iolab.top/java-base-course-15-Java-network-programming/"/>
+    <id>https://myblog.iolab.top/java-base-course-15-Java-network-programming/</id>
+    <published>2019-10-25T12:26:47.000Z</published>
+    <updated>2019-10-25T12:26:47.000Z</updated>
     
     <summary type="html">
     
       &lt;div class=&quot;note info&quot;&gt;
-            &lt;p&gt;第一章 Java 入门基础及环境搭建&lt;/p&gt;
+            &lt;p&gt;第 15 章 Java 网络编程&lt;/p&gt;
           &lt;/div&gt;
     
     </summary>
     
     
-      <category term="java" scheme="https://myblog.iolab.top/categories/java/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
     
-      <category term="java基础教程" scheme="https://myblog.iolab.top/categories/java/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="java" scheme="https://myblog.iolab.top/tags/java/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
     
-      <category term="java基础教程" scheme="https://myblog.iolab.top/tags/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title>java [基础] 教程</title>
-    <link href="https://myblog.iolab.top/java-base-contents/"/>
-    <id>https://myblog.iolab.top/java-base-contents/</id>
-    <published>2019-11-19T10:26:47.000Z</published>
-    <updated>2019-11-19T10:26:47.000Z</updated>
+    <title>第 14 章 Java 多线程编程</title>
+    <link href="https://myblog.iolab.top/java-base-course-14-Java-multithreading/"/>
+    <id>https://myblog.iolab.top/java-base-course-14-Java-multithreading/</id>
+    <published>2019-10-24T12:26:47.000Z</published>
+    <updated>2019-10-24T12:26:47.000Z</updated>
     
     <summary type="html">
     
       &lt;div class=&quot;note info&quot;&gt;
-            &lt;p&gt;这套教程适用于没有任何 Java 基础，或者基础薄弱的学员，它通俗易懂，并且非常全面，30 天从入门到精通不是神话。（这里是 java [基础] 教程目录页）&lt;/p&gt;
+            &lt;p&gt;第 14 章 Java 多线程编程&lt;/p&gt;
           &lt;/div&gt;
     
     </summary>
     
     
-      <category term="java" scheme="https://myblog.iolab.top/categories/java/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
     
-      <category term="java基础教程" scheme="https://myblog.iolab.top/categories/java/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="java" scheme="https://myblog.iolab.top/tags/java/"/>
-    
-      <category term="java基础教程" scheme="https://myblog.iolab.top/tags/java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo搭建个人博客系列：部署上线篇</title>
-    <link href="https://myblog.iolab.top/hexo-deploy-to-VPS/"/>
-    <id>https://myblog.iolab.top/hexo-deploy-to-VPS/</id>
-    <published>2018-11-20T12:09:55.000Z</published>
-    <updated>2019-11-17T17:48:01.110Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文主要介绍了在将 Hexo 博客部署上线过程中将会遇到的一系列问题。&lt;/p&gt;
-&lt;p&gt;第一章主要介绍了将 Hexo 部署到 VPS 的方案，使得在本地推送更新后自动同步线上内容，部署过程主要分为三步走，首先从本地推送更新到远程仓库，然后触发 Git Hooks 将静态资源部署到 Web 根目录，最后启动 Nginx 服务器。&lt;/p&gt;
-&lt;p&gt;第二章主要介绍了如何分析页面加载性能瓶颈，并提供了通过CDN和代码压缩合并等方法来优化页面加载速度的方案。&lt;/p&gt;
-&lt;p&gt;第三章主要介绍了如何将站点提交到各大搜索引擎收录，并讨论了SEO相关话题。&lt;/p&gt;
-&lt;p&gt;后续章节则零散的介绍了为站点添加404页面和RSS链接。&lt;/p&gt;
-    
-    </summary>
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/categories/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
     
-    
-      <category term="Hexo" scheme="https://myblog.iolab.top/tags/Hexo/"/>
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title>Hexo搭建个人博客系列：进阶设置篇</title>
-    <link href="https://myblog.iolab.top/hexo-advanced-settings/"/>
-    <id>https://myblog.iolab.top/hexo-advanced-settings/</id>
-    <published>2018-11-20T12:09:54.000Z</published>
-    <updated>2019-11-17T17:51:52.296Z</updated>
+    <title>第 13 章 Java 输入/输出（I/O）流</title>
+    <link href="https://myblog.iolab.top/java-base-course-13-Java-input-output-flow/"/>
+    <id>https://myblog.iolab.top/java-base-course-13-Java-input-output-flow/</id>
+    <published>2019-10-23T12:26:47.000Z</published>
+    <updated>2019-10-23T12:26:47.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本篇文章介绍了如何为 Hexo 博客集成更多强大的功能。&lt;/p&gt;
-&lt;p&gt;第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点PV和PU统计、站点运行时间统计、文章PV统计、站点和文章字数统计等。&lt;/p&gt;
-&lt;p&gt;第二章介绍了针对于站点的个性化设置方案，包括添加搞怪的网页标题，添加站内搜索功能，添加热门文章排行榜页面，添加豆瓣阅读/电影/游戏等资料页面，添加在线聊天和即时反馈等功能。&lt;/p&gt;
-&lt;p&gt;第三章介绍了针对于文章页面的个性化设置方案，包括在文章末尾添加评论组件、评分组件、打赏入口、版权声明、推荐文章等，为文章中的图片添加点击灯箱效果，以及为文章设置访问密码。&lt;/p&gt;
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;第 13 章 Java 输入/输出（I/O）流&lt;/p&gt;
+          &lt;/div&gt;
     
     </summary>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/categories/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/tags/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title>Hexo搭建个人博客系列：主题美化篇</title>
-    <link href="https://myblog.iolab.top/hexo-theme-beautiful/"/>
-    <id>https://myblog.iolab.top/hexo-theme-beautiful/</id>
-    <published>2018-11-20T12:09:53.000Z</published>
-    <updated>2019-11-17T17:48:43.391Z</updated>
+    <title>第 12 章 Java 反射机制</title>
+    <link href="https://myblog.iolab.top/java-base-course-12-Java-reflection-mechanism/"/>
+    <id>https://myblog.iolab.top/java-base-course-12-Java-reflection-mechanism/</id>
+    <published>2019-10-22T12:26:47.000Z</published>
+    <updated>2019-10-22T12:26:47.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本文介绍了在 Next 主题的基础上进一步对博客进行美化的方案，主要包括:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在文章末尾添加结束标记&lt;/li&gt;
-&lt;li&gt;修改侧边栏的位置到左边&lt;/li&gt;
-&lt;li&gt;添加不同类型的动态背景效果&lt;/li&gt;
-&lt;li&gt;添加 live2d 看板娘&lt;/li&gt;
-&lt;li&gt;为布局元素添加边缘弹性摆动效果&lt;/li&gt;
-&lt;li&gt;个性化回到顶部按钮&lt;/li&gt;
-&lt;li&gt;添加不同类型的鼠标点击特效&lt;/li&gt;
-&lt;li&gt;评论区输入打字礼花特效&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;读者可以根据需要选择其中喜欢的方案应用到站点博客中。&lt;/p&gt;
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;第 12 章 Java 反射机制&lt;/p&gt;
+          &lt;/div&gt;
     
     </summary>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/categories/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/tags/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title>Hexo搭建个人博客系列：写作技巧篇</title>
-    <link href="https://myblog.iolab.top/hexo-whirting-skills/"/>
-    <id>https://myblog.iolab.top/hexo-whirting-skills/</id>
-    <published>2018-11-20T12:09:52.000Z</published>
-    <updated>2019-11-17T17:49:36.009Z</updated>
+    <title>第 11 章 Java 集合、泛型和枚举</title>
+    <link href="https://myblog.iolab.top/java-base-course-11-Java-collection-generics-and-enumerations/"/>
+    <id>https://myblog.iolab.top/java-base-course-11-Java-collection-generics-and-enumerations/</id>
+    <published>2019-10-21T12:26:47.000Z</published>
+    <updated>2019-10-21T12:26:47.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本文介绍 Hexo 博客的写作技巧。&lt;/p&gt;
-&lt;p&gt;第一章中介绍了 Hexo 中写作相关的基本概念，包括三种基本布局，标签与分类，Markdown 写作语法。&lt;/p&gt;
-&lt;p&gt;第二章中介绍了 Hexo 中常用的内置标签，包括 note 标签、 label 标签、 button 标签、 tab 标签以及代码块的高级用法，通过使用写作标签可以快速编写样式丰富的文档片段。&lt;/p&gt;
-&lt;p&gt;第三章中介绍了在文档中插入图片、音乐、视频等多媒体元素的方案。&lt;/p&gt;
-&lt;p&gt;第四章中根据个人使用经验为大家推荐了几款优雅实用的 Markdown 写作工具。&lt;/p&gt;
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;第 11 章 Java 集合、泛型和枚举&lt;/p&gt;
+          &lt;/div&gt;
     
     </summary>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/categories/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/tags/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
-    <title>Hexo搭建个人博客系列：基础建站篇</title>
-    <link href="https://myblog.iolab.top/hexo-get-started/"/>
-    <id>https://myblog.iolab.top/hexo-get-started/</id>
-    <published>2018-11-20T12:09:51.000Z</published>
-    <updated>2019-11-15T13:36:08.000Z</updated>
+    <title>第 10 章 Java 异常处理</title>
+    <link href="https://myblog.iolab.top/java-base-course-10-Java-exception-handling/"/>
+    <id>https://myblog.iolab.top/java-base-course-10-Java-exception-handling/</id>
+    <published>2019-10-20T12:26:47.000Z</published>
+    <updated>2019-10-20T12:26:47.000Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Hexo 是一个高效简洁的静态博客框架，支持 Markdown 写作语法，插件丰富，主题优雅，部署方便。目前已成为多数人博客建站的选择。&lt;/p&gt;
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;第 10 章 Java 异常处理&lt;/p&gt;
+          &lt;/div&gt;
     
     </summary>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/categories/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Hexo" scheme="https://myblog.iolab.top/tags/Hexo/"/>
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 9 章 Java 继承和多态</title>
+    <link href="https://myblog.iolab.top/java-base-course-9-Java-inheritance-and-polymorphism/"/>
+    <id>https://myblog.iolab.top/java-base-course-9-Java-inheritance-and-polymorphism/</id>
+    <published>2019-10-19T12:26:47.000Z</published>
+    <updated>2019-10-19T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;第 9 章 Java 继承和多态&lt;/p&gt;
+          &lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 8 章 Java 类和对象</title>
+    <link href="https://myblog.iolab.top/java-base-course-8-Java-classes-and-objects/"/>
+    <id>https://myblog.iolab.top/java-base-course-8-Java-classes-and-objects/</id>
+    <published>2019-10-18T12:26:47.000Z</published>
+    <updated>2019-10-18T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;第 8 章 Java 类和对象&lt;/p&gt;
+          &lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 7 章 Java 数组处理</title>
+    <link href="https://myblog.iolab.top/java-base-course-7-Java-array-processing/"/>
+    <id>https://myblog.iolab.top/java-base-course-7-Java-array-processing/</id>
+    <published>2019-10-17T12:26:47.000Z</published>
+    <updated>2019-10-17T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note info&quot;&gt;
+            &lt;p&gt;第 7 章 Java 数组处理&lt;/p&gt;
+          &lt;/div&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 1 节 Java Object 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-1/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-1/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;blockquote&gt;
+&lt;p&gt;Java Object 类详解： Object 类的常用方法（equals() 和 getClass()）&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 2 节 Java Integer 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-2/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-2/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Integer 类在对象中包装了一个基本类型 int 的值。Integer 类对象包含一个 int 类型的字段。此外，该类提供了多个方法，能在 int 类型和 String 类型之间互相转换，还提供了处理 int 类型时非常有用的其他一些常量和方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 3 节 Java Float 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-3/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-3/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Float 类在对象中包装了一个基本类型 float 的值。Float 类对象包含一个 float 类型的字段。此外，该类提供了多个方法，能在 float 类型与 String 类型之间互相转换，同时还提供了处理 float 类型时比较常用的常量和方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 4 节 Java Double 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-4/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-4/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Double 类在对象中包装了一个基本类型 double 的值。Double 类对象包含一个 double 类型的字段。此外，该类还提供了多个方法，可以将 double 类型与 String 类型相互转换，同时 还提供了处理 double 类型时比较常用的常量和方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 5 节 Java Number 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-5/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-5/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Number 是一个抽象类，也是一个超类（即父类）。Number 类属于 java.lang 包，所有的包装类（如 Double、Float、Byte、Short、Integer 以及 Long）都是抽象类 Number 的子类。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 6 节 Java Character 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-6/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-6/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Character 类是字符数据类型 char 的包装类。Character 类的对象包含类型为 char 的单个字段，这样能把基本数据类型当对象来处理，其常用方法如表 1 所示。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 7 节 Java Boolean 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-7/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-7/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Boolean 类将基本类型为 boolean 的值包装在一个对象中。一个 Boolean 类的对象只包含一个类型为 boolean 的字段。此外，此类还为 boolean 和 String 的相互转换提供了很多方法，并提供了处理 boolean 时非常有用的其他一些常用方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 8 节 Java Byte 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-8/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-8/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Byte 类将基本类型为 byte 的值包装在一个对象中。一个 Byte 类的对象只包含一个类型为 byte 的字段。此外，该类还为 byte 和 String 的相互转换提供了方法，并提供了一些处理 byte 时非常有用的常量和方法。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 9 节 Java System 类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-9/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-9/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;System 类位于 java.lang 包，代表当前 Java 程序的运行平台，系统级的很多属性和控制方法都放置在该类的内部。由于该类的构造方法是 private 的，所以无法创建该类的对象，也就是无法实例化该类。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 6 章 Java 内置的包装类</title>
+    <link href="https://myblog.iolab.top/java-base-course-6-Java-built-in-wrapper-class/"/>
+    <id>https://myblog.iolab.top/java-base-course-6-Java-built-in-wrapper-class/</id>
+    <published>2019-10-16T12:26:47.000Z</published>
+    <updated>2019-10-16T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Java 是一种面向对象的编程语言，Java 中的类把方法与数据类型连接在一起，构成了自包含式的处理单元。但在 Java 中不能定义基本类型对象，为了能将基本类型视为对象处理，并能连接相关方法，Java 为每个基本类型都提供了包装类，如 int 型数值的包装类 Integer，boolean 型数值的包装类 Boolean 等。这样便可以把这些基本类型转换为对象来处理了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>第 1 节 Java Math 类的常用方法</title>
+    <link href="https://myblog.iolab.top/java-base-course-5-1/"/>
+    <id>https://myblog.iolab.top/java-base-course-5-1/</id>
+    <published>2019-10-15T12:26:47.000Z</published>
+    <updated>2019-10-15T12:26:47.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; class=&quot;aplayer-secondary-script-marker&quot;&gt;&lt;/script&gt;&lt;p&gt;Java 中的 +、-、*、/ 和 % 等基本算术运算符不能进行更复杂的数学运算，例如，三角函数、对数运算、指数运算等。于是 Java 提供了 Math 工具类来完成这些复杂的运算。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/categories/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="Java" scheme="https://myblog.iolab.top/tags/Java/"/>
+    
+      <category term="Java基础教程" scheme="https://myblog.iolab.top/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   

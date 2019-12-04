@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="格式化日期表示将日期&#x2F;时间格式转换为预先定义的日期&#x2F;时间格式。例如将日期“Fri May 18 15:46:24 CST2016” 格式转换为 “2016-5-18 15:46:24 星期五”的格式。">
+<meta name="keywords" content="Java,Java基础教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第 6 节 Java 日期格式化">
+<meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-5-6&#x2F;index.html">
+<meta property="og:site_name" content="Time - C">
+<meta property="og:description" content="格式化日期表示将日期&#x2F;时间格式转换为预先定义的日期&#x2F;时间格式。例如将日期“Fri May 18 15:46:24 CST2016” 格式转换为 “2016-5-18 15:46:24 星期五”的格式。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-15T12:26:47.000Z">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://myblog.iolab.top/java-base-course-5-6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>第 6 节 Java 日期格式化 | Time - C</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Time - C" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Time - C</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Time - Container</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-java">
+
+    <a href="/Java/" rel="section"><i class="fa fa-fw fa-send"></i>Java</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/0xunyu0" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://myblog.iolab.top/java-base-course-5-6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.png">
+      <meta itemprop="name" content="staySample">
+      <meta itemprop="description" content="保持简单 保持持续">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Time - C">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          第 6 节 Java 日期格式化
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-15 20:26:47" itemprop="dateCreated datePublished" datetime="2019-10-15T20:26:47+08:00">2019-10-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础教程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>格式化日期表示将日期/时间格式转换为预先定义的日期/时间格式。例如将日期“Fri May 18 15:46:24 CST2016” 格式转换为 “2016-5-18 15:46:24 星期五”的格式。</p><a id="more"></a>
+<p>在 Java 中，可以使用 DateFormat 类和 SimpleDateFormat 类来格式化日期，下面详细介绍这两个格式化日期类的使用。</p>
+<h2 id="DateFormat-类"><a href="#DateFormat-类" class="headerlink" title="DateFormat 类"></a>DateFormat 类</h2><p>DateFormat 是日期/时间格式化子类的抽象类，它以与语言无关的方式格式化并解析日期或时间。日期/时间格式化子类（如 SimpleDateFormat）允许进行格式化（也就是日期→文本）、解析（文本→日期）和标准化日期。</p>
+<p>在创建 DateFormat 对象时不能使用 new 关键字，而应该使用 DateFormat 类中的静态方法 getDateInstance()，示例代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DateFormat df = DateFormat.getDatelnstance();</span><br></pre></td></tr></table></figure>
+<p>在创建了一个 DateFormat 对象后，可以调用该对象中的方法来对日期/时间进行格式化。DateFormat 类中常用方法如表 1 所示。</p>
+<blockquote>
+<p>表 1 DateFormat类的常用方法</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">String format(Date date)</td>
+<td align="center">将 Date 格式化日期/时间字符串</td>
+</tr>
+<tr>
+<td align="center">Calendar getCalendar()</td>
+<td align="center">获取与此日期/时间格式相关联的日历</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getDateInstance()</td>
+<td align="center">获取具有默认格式化风格和默认语言环境的日期格式</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getDateInstance(int style)</td>
+<td align="center">获取具有指定格式化风格和默认语言环境的日期格式</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getDateInstance(int style,Locale locale)</td>
+<td align="center">获取具有指定格式化风格和指定语言环境的日期格式</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getDateTimeInstance()</td>
+<td align="center">获取具有默认格式化风格和默认语言环境的日期/时间格式</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getDateTimeInstance(int dateStyle,int timeStyle)</td>
+<td align="center">获取具有指定日期/时间格式化风格和默认语言环境的日期/时间格式</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getDateTimeInstance(int dateStyle,int timeStyle,Locale locale)</td>
+<td align="center">获取具有指定日期/时间格式化风格和指定语言环境的日期/时间格式</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getTimeInstance()</td>
+<td align="center">获取具有默认格式化风格和默认语言环境的时间格式</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getTimeInstance(int style)</td>
+<td align="center">获取具有指定格式化风格和默认语言环境的时间格式</td>
+</tr>
+<tr>
+<td align="center">static DateFormat getTimeInstance(int style,Locale locale)</td>
+<td align="center">获取具有指定格式化风格和指定语言环境的时间格式</td>
+</tr>
+<tr>
+<td align="center">void setCalendar(Calendar newCalendar)</td>
+<td align="center">为此格式设置日历</td>
+</tr>
+<tr>
+<td align="center">Date parse(String source)</td>
+<td align="center">将给定的字符串解析成日期/时间</td>
+</tr>
+</tbody></table>
+<p>格式化样式主要通过 DateFormat 常量设置。将不同的常量传入到表 1 所示的方法中，以控制结果的长度。DateFormat 类的常量如下。</p>
+<ul>
+<li>SHORT：完全为数字，如 12.5.10 或 5:30pm。</li>
+<li>MEDIUM：较长，如 May 10，2016。</li>
+<li>LONG：更长，如 May 12，2016 或 11:15:32am。</li>
+<li>FULL：是完全指定，如 Tuesday、May 10、2012 AD 或 11:l5:42am CST。</li>
+</ul>
+<p>使用 DateFormat 类格式化曰期/时间的示例如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 获取不同格式化风格和中国环境的日期</span></span><br><span class="line">DateFormat df1 = DateFormat.getDateInstance(DateFormat.SHORT, Locale.CHINA);</span><br><span class="line">DateFormat df2 = DateFormat.getDateInstance(DateFormat.FULL, Locale.CHINA);</span><br><span class="line">DateFormat df3 = DateFormat.getDateInstance(DateFormat.MEDIUM, Locale.CHINA);</span><br><span class="line">DateFormat df4 = DateFormat.getDateInstance(DateFormat.LONG, Locale.CHINA);</span><br><span class="line"><span class="comment">// 获取不同格式化风格和中国环境的时间</span></span><br><span class="line">DateFormat df5 = DateFormat.getTimeInstance(DateFormat.SHORT, Locale.CHINA);</span><br><span class="line">DateFormat df6 = DateFormat.getTimeInstance(DateFormat.FULL, Locale.CHINA);</span><br><span class="line">DateFormat df7 = DateFormat.getTimeInstance(DateFormat.MEDIUM, Locale.CHINA);</span><br><span class="line">DateFormat df8 = DateFormat.getTimeInstance(DateFormat.LONG, Locale.CHINA);</span><br><span class="line"><span class="comment">// 将不同格式化风格的日期格式化为日期字符串</span></span><br><span class="line">String date1 = df1.format(<span class="keyword">new</span> Date());</span><br><span class="line">String date2 = df2.format(<span class="keyword">new</span> Date());</span><br><span class="line">String date3 = df3.format(<span class="keyword">new</span> Date());</span><br><span class="line">String date4 = df4.format(<span class="keyword">new</span> Date());</span><br><span class="line"><span class="comment">// 将不同格式化风格的时间格式化为时间字符串</span></span><br><span class="line">String time1 = df5.format(<span class="keyword">new</span> Date());</span><br><span class="line">String time2 = df6.format(<span class="keyword">new</span> Date());</span><br><span class="line">String time3 = df7.format(<span class="keyword">new</span> Date());</span><br><span class="line">String time4 = df8.format(<span class="keyword">new</span> Date());</span><br><span class="line"><span class="comment">// 输出日期</span></span><br><span class="line">System.out.println(<span class="string">"SHORT："</span> + date1 + <span class="string">" "</span> + time1);</span><br><span class="line">System.out.println(<span class="string">"FULL："</span> + date2 + <span class="string">" "</span> + time2);</span><br><span class="line">System.out.println(<span class="string">"MEDIUM："</span> + date3 + <span class="string">" "</span> + time3);</span><br><span class="line">System.out.println(<span class="string">"LONG："</span> + date4 + <span class="string">" "</span> + time4);</span><br></pre></td></tr></table></figure>
+
+<p>运行该段代码，输出的结果如下：</p>
+<pre><code>SHORT：18-10-15 上午9:30
+FULL：2018年10月15日 星期一 上午09时30分43秒 CST
+MEDIUM：2018-10-15 9:30:43
+LONG：2018年10月15日 上午09时30分43秒</code></pre><p>该示例主要介绍了 DateFormat 类中方法与常量的结合使用，通过使用 DateFomat 类可以对日期进行不同风格的格式化。</p>
+<h2 id="SimpleDateFormat-类"><a href="#SimpleDateFormat-类" class="headerlink" title="SimpleDateFormat 类"></a>SimpleDateFormat 类</h2><p>如果使用 DateFormat 类格式化日期/时间并不能满足要求，那么就需要使用 DateFormat 类的子类——SimpleDateFormat。</p>
+<p>SimpleDateFormat 是一个以与语言环境有关的方式来格式化和解析日期的具体类，它允许进行格式化（日期→文本）、解析（文本→日期）和规范化。SimpleDateFormat 使得可以选择任何用户定义的日期/时间格式的模式。</p>
+<p>SimpleDateFormat 类主要有如下 3 种构造方法。</p>
+<ul>
+<li>SimpleDateFormat()：用默认的格式和默认的语言环境构造 SimpleDateFormat。</li>
+<li>SimpleDateFormat(String pattern)：用指定的格式和默认的语言环境构造 SimpleDateF ormat。</li>
+<li>SimpleDateFormat(String pattern,Locale locale)：用指定的格式和指定的语言环境构造 SimpleDateF ormat。</li>
+</ul>
+<p>SimpleDateFormat 自定义格式中常用的字母及含义如表 2 所示。</p>
+<blockquote>
+<p>表 2 日期/时间格式中的字母及其含义与示例</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">字母</th>
+<th align="center">含义</th>
+<th align="center">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">y</td>
+<td align="center">年份。一般用 yy 表示两位年份，yyyy 表示 4 位年份</td>
+<td align="center">使用 yy 表示的年扮，如 11；使用 yyyy 表示的年份，如 2011</td>
+</tr>
+<tr>
+<td align="center">M</td>
+<td align="center">月份。一般用 MM 表示月份，如果使用 MMM，则会根据语言环境显示不同语言的月份</td>
+<td align="center">使用 MM 表示的月份，如 05；使用 MMM 表示月份，在 Locale.CHINA语言环境下，如“十月”；在 Locale.US语言环境下，如 Oct</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td align="center">月份中的天数。一般用 dd 表示天数</td>
+<td align="center">使用 dd 表示的天数，如 10</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">年份中的天数。表示当天是当年的第几天， 用 D 表示</td>
+<td align="center">使用 D 表示的年份中的天数，如 295</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">星期几。用 E 表示，会根据语言环境的不同， 显示不同语言的星期几</td>
+<td align="center">使用 E 表示星期几，在 Locale.CHINA 语言环境下，如“星期四”；在 Locale.US 语言环境下，如 Thu</td>
+</tr>
+<tr>
+<td align="center">H</td>
+<td align="center">一天中的小时数（0~23)。一般用 HH 表示小时数</td>
+<td align="center">使用 HH 表示的小时数，如 18</td>
+</tr>
+<tr>
+<td align="center">h</td>
+<td align="center">一天中的小时数（1~12)。一般使用 hh 表示小时数</td>
+<td align="center">使用 hh 表示的小时数，如 10 (注意 10 有可能是 10 点，也可能是 22 点）</td>
+</tr>
+<tr>
+<td align="center">m</td>
+<td align="center">分钟数。一般使用 mm 表示分钟数</td>
+<td align="center">使用 mm 表示的分钟数，如 29</td>
+</tr>
+<tr>
+<td align="center">s</td>
+<td align="center">秒数。一般使用 ss 表示秒数</td>
+<td align="center">使用 ss 表示的秒数，如 38</td>
+</tr>
+<tr>
+<td align="center">S</td>
+<td align="center">毫秒数。一般使用 SSS 表示毫秒数</td>
+<td align="center">使用 SSS 表示的毫秒数，如 156</td>
+</tr>
+</tbody></table>
+<p><strong>例 1</strong></p>
+<p>编写 Java 程序，使用 SimpleDateFormat 类格式化当前日期并打印，日期格式为“xxxx 年 xx 月 xx 日星期 xxx 点 xx 分 xx 秒”，具体的实现代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.text.SimpleDateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test13</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Date now = <span class="keyword">new</span> Date(); <span class="comment">// 创建一个Date对象，获取当前时间</span></span><br><span class="line">        <span class="comment">// 指定格式化格式</span></span><br><span class="line">        SimpleDateFormat f = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"今天是 "</span> + <span class="string">"yyyy 年 MM 月 dd 日 E HH 点 mm 分 ss 秒"</span>);</span><br><span class="line">        System.out.println(f.format(now)); <span class="comment">// 将当前时间袼式化为指定的格式</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该程序的运行结果如下：</p>
+<pre><code>今天是 2018 年 10 月 15 日 星期一 09 点 26 分 23 秒</code></pre>
+    </div>
+
+    
+    
+    
+
+    <div>
+  	  
+  	    <div>
+	
+		<div style="text-align:center;color:#bfbfbf;font-size:16px;">
+			<span>-------- 本文结束 </span>
+			<i class="fa fa-paw"></i>
+			<span> 感谢阅读 --------</span>
+		</div>
+	
+</div>
+  	  
+  	</div>
+      
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>staySample
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://myblog.iolab.top/java-base-course-5-6/" title="第 6 节 Java 日期格式化">https://myblog.iolab.top/java-base-course-5-6/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> Java基础教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/java-base-course-5-7/" rel="next" title="第 7 节 Java 计算课程结束的日期">
+                  <i class="fa fa-chevron-left"></i> 第 7 节 Java 计算课程结束的日期
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/java-base-course-5-5/" rel="prev" title="第 5 节 Java 时间日期的处理">
+                  第 5 节 Java 时间日期的处理 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#DateFormat-类"><span class="nav-number">1.</span> <span class="nav-text">DateFormat 类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SimpleDateFormat-类"><span class="nav-number">2.</span> <span class="nav-text">SimpleDateFormat 类</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="staySample"
+    src="/images/me.png">
+  <p class="site-author-name" itemprop="name">staySample</p>
+  <div class="site-description" itemprop="description">保持简单 保持持续</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-users"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">T-Cloud Data Studio</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

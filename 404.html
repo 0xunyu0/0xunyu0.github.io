@@ -39,7 +39,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true},
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
@@ -51,13 +51,13 @@
   };
 </script>
 
-  <meta name="description" content="404 页面未找到                返回      首页">
+  <meta name="description" content="404 页面未找到              返回      首页">
 <meta name="keywords" content="java">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Time - C">
 <meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;404.html">
 <meta property="og:site_name" content="Time - C">
-<meta property="og:description" content="404 页面未找到                返回      首页">
+<meta property="og:description" content="404 页面未找到              返回      首页">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-11-19T15:18:57.035Z">
 <meta name="twitter:card" content="summary">
@@ -167,9 +167,34 @@
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -212,9 +237,7 @@
       <div class="post-body">
           <p style="text-align:center; font-size: 36px">
   404 页面未找到
-</p>
-
-<p style="text-align:center">
+</p><p style="text-align:center">
   <a class="btn" onclick="window.history.back()">
     <i class="fa fa-angle-double-left fa-fw fa-lg"></i>
     返回
@@ -274,7 +297,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">78</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -360,6 +383,8 @@
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 

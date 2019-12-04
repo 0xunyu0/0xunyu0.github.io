@@ -39,7 +39,7 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true},
     path: 'search.xml',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
@@ -51,16 +51,16 @@
   };
 </script>
 
-  <meta name="description" content="You&amp;apos;ve got to find what you love , And that is as true for your work as it is for your lovers .  Welcome             这里归档的信息基于网络整理，初衷是让读者能从中受益，如有错误概念，欢迎批评指正。                          作者致力于在此构建一个高质量的信息">
+  <meta name="description" content="You&amp;apos;ve got to find what you love , And that is as true for your work as it is for your lovers .">
 <meta name="keywords" content="java">
 <meta property="og:type" content="website">
 <meta property="og:title" content="关于">
 <meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;about&#x2F;index.html">
 <meta property="og:site_name" content="Time - C">
-<meta property="og:description" content="You&amp;apos;ve got to find what you love , And that is as true for your work as it is for your lovers .  Welcome             这里归档的信息基于网络整理，初衷是让读者能从中受益，如有错误概念，欢迎批评指正。                          作者致力于在此构建一个高质量的信息">
+<meta property="og:description" content="You&amp;apos;ve got to find what you love , And that is as true for your work as it is for your lovers .">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;myblog-1253741713.cos.ap-beijing.myqcloud.com&#x2F;about.png">
-<meta property="og:updated_time" content="2019-11-19T11:20:11.835Z">
+<meta property="og:updated_time" content="2019-11-20T14:33:03.448Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;myblog-1253741713.cos.ap-beijing.myqcloud.com&#x2F;about.png">
 
@@ -169,9 +169,34 @@
     <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -213,7 +238,7 @@
       
       <div class="post-body">
           <blockquote class="blockquote-center"><br>You've got to find what you love ,<br>
-And that is as true for your work <br>as it is for your lovers .<br></blockquote>
+And that is as true for your work <br>as it is for your lovers .<br></blockquote><a id="more"></a>
 
 <h2 id="Welcome"><a href="#Welcome" class="headerlink" title="Welcome"></a>Welcome</h2><div class="note danger">
             <p>这里归档的信息基于网络整理，初衷是让读者能从中受益，如有错误概念，欢迎批评指正。</p>
@@ -228,7 +253,7 @@ And that is as true for your work <br>as it is for your lovers .<br></blockquote
           </div>
 
 <p><img src="https://myblog-1253741713.cos.ap-beijing.myqcloud.com/about.png" alt></p>
-<h2 id="这是一个博客"><a href="#这是一个博客" class="headerlink" title="这是一个博客"></a>这是一个博客</h2><p>博客由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动，主题是 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT</a> (<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT旧版</a>) ，部署在 <a href="https://coding.net" target="_blank" rel="noopener">Coding</a> 和 <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>上。</p>
+<h2 id="这是一个博客"><a href="#这是一个博客" class="headerlink" title="这是一个博客"></a>这是一个博客</h2><p>博客由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动，主题是 <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT</a> (<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT旧版</a>) ，运行在<a href="https://cn.aliyun.com/" target="_blank" rel="noopener">阿里云</a> ，备份在 <a href="https://coding.net" target="_blank" rel="noopener">Coding</a> 和 <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>上。</p>
 <h2 id="为什么搭建这个博客？"><a href="#为什么搭建这个博客？" class="headerlink" title="为什么搭建这个博客？"></a>为什么搭建这个博客？</h2><p>因为之前用笔记本写了一些东东，目的是为了归档并存储我所习得的各种知识，以利于我的创造。但是，我慢慢地发现了笔记本书写的局限性：</p>
 <ol>
 <li>美观问题：我的字写的<del>不太好看</del></li>
@@ -317,7 +342,7 @@ And that is as true for your work <br>as it is for your lovers .<br></blockquote
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">78</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -403,6 +428,8 @@ And that is as true for your work <br>as it is for your lovers .<br></blockquote
 
 
 
+
+  <script src="/js/local-search.js"></script>
 
 
 

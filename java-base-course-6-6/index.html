@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Character 类是字符数据类型 char 的包装类。Character 类的对象包含类型为 char 的单个字段，这样能把基本数据类型当对象来处理，其常用方法如表 1 所示。">
+<meta name="keywords" content="Java,Java基础教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第 6 节 Java Character 类">
+<meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-6-6&#x2F;index.html">
+<meta property="og:site_name" content="Time - C">
+<meta property="og:description" content="Character 类是字符数据类型 char 的包装类。Character 类的对象包含类型为 char 的单个字段，这样能把基本数据类型当对象来处理，其常用方法如表 1 所示。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-16T12:26:47.000Z">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://myblog.iolab.top/java-base-course-6-6/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>第 6 节 Java Character 类 | Time - C</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Time - C" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Time - C</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Time - Container</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-java">
+
+    <a href="/Java/" rel="section"><i class="fa fa-fw fa-send"></i>Java</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/0xunyu0" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://myblog.iolab.top/java-base-course-6-6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.png">
+      <meta itemprop="name" content="staySample">
+      <meta itemprop="description" content="保持简单 保持持续">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Time - C">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          第 6 节 Java Character 类
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-16 20:26:47" itemprop="dateCreated datePublished" datetime="2019-10-16T20:26:47+08:00">2019-10-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础教程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Character 类是字符数据类型 char 的包装类。Character 类的对象包含类型为 char 的单个字段，这样能把基本数据类型当对象来处理，其常用方法如表 1 所示。</p><a id="more"></a>
+<blockquote>
+<p>表 1 Character类的常用方法</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">void Character(char value)</td>
+<td align="center">构造一个新分配的 Character 对象，用以表示指定的 char 值</td>
+</tr>
+<tr>
+<td align="center">char charValue()</td>
+<td align="center">返回此 Character 对象的值，此对象表示基本 char 值</td>
+</tr>
+<tr>
+<td align="center">int compareTo(Character anotherCharacter)</td>
+<td align="center">根据数字比较两个 Character 对象</td>
+</tr>
+<tr>
+<td align="center">boolean equals(Character anotherCharacter)</td>
+<td align="center">将此对象与指定对象比较，当且仅当参数不是 null，而 是一个与此对象包含相同 char 值的 Character 对象时， 结果才是 true</td>
+</tr>
+<tr>
+<td align="center">boolean isDigit(char ch)</td>
+<td align="center">确定指定字符是否为数字，如果通过 Character. getType(ch) 提供的字符的常规类别类型为 DECIMAL_DIGIT_NUMBER，则字符为数字</td>
+</tr>
+<tr>
+<td align="center">boolean isLetter(int codePoint)</td>
+<td align="center">确定指定字符（Unicode 代码点）是否为字母</td>
+</tr>
+<tr>
+<td align="center">boolean isLetterOrDigit(int codePoint)</td>
+<td align="center">确定指定字符（Unicode 代码点）是否为字母或数字</td>
+</tr>
+<tr>
+<td align="center">boolean isLowerCase(char ch)</td>
+<td align="center">确定指定字符是否为小写字母</td>
+</tr>
+<tr>
+<td align="center">boolean isUpperCase(char ch)</td>
+<td align="center">确定指定字符是否为大写字母</td>
+</tr>
+<tr>
+<td align="center">char toLowerCase(char ch)</td>
+<td align="center">使用来自 UnicodeData 文件的大小写映射信息将字符参数转换为小写</td>
+</tr>
+<tr>
+<td align="center">char toUpperCase(char ch)</td>
+<td align="center">使用来自 UnicodeData 文件的大小写映射信息将字符参数转换为大写</td>
+</tr>
+</tbody></table>
+<p>可以从 char 值中创建一个 Character 对象。例如，下列语句为字符 S 创建了一个 Character 对象。</p>
+<pre><code>Character character = new Character(&apos;S&apos;);</code></pre><p>CompareTo() 方法将这个字符与其他字符比较，并且返回一个整型数组，这个值是两个字符比较后的标准代码差值。当且仅当两个字符相同时，equals() 方法的返回值才为 true。如下面的代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Character character = <span class="keyword">new</span> Character(<span class="string">'A'</span>);</span><br><span class="line"><span class="keyword">int</span> result1 = character.compareTo(<span class="keyword">new</span> Character(<span class="string">'V'</span>));</span><br><span class="line">System.out.println(result1);    <span class="comment">// 输出：0</span></span><br><span class="line"><span class="keyword">int</span> result2 = character.compareTo(<span class="keyword">new</span> Character(<span class="string">'B'</span>));</span><br><span class="line">System.out.println(resuit2);    <span class="comment">// 输出：-1</span></span><br><span class="line"><span class="keyword">int</span> result3 = character.compareTo(<span class="keyword">new</span> Character(<span class="string">'1'</span>));</span><br><span class="line">System.out.println(result3);    <span class="comment">// 输出：-2</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>例 1</strong></p>
+<p>在注册会员时，需要验证用户输入的用户名、密码、性别、年龄和邮箱地址等信息是否符合标准，如果符合标准方可进行注册。那么，下面就使用 Character 类中的一些静态方法来完成这个程序，具体的实现步骤如下。</p>
+<p>1）创建 Register 类，在该类中创建 validateUser() 方法，对用户输入的用户名、密码和年龄进行验证，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Register</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">validateUser</span><span class="params">(String uname,String upwd,String age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> conUname = <span class="keyword">false</span>;       <span class="comment">// 用户名是否符合要求</span></span><br><span class="line">        <span class="keyword">boolean</span> conPwd = <span class="keyword">false</span>;    <span class="comment">// 密码是否符合要求</span></span><br><span class="line">        <span class="keyword">boolean</span> conAge = <span class="keyword">false</span>;    <span class="comment">// 年龄是否符合要求</span></span><br><span class="line">        <span class="keyword">boolean</span> con = <span class="keyword">false</span>;    <span class="comment">// 验证是否通过</span></span><br><span class="line">        <span class="keyword">if</span> (uname.length() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; uname.length();i++) &#123;</span><br><span class="line">                <span class="comment">// 验证用户名是否全部为字母，不能含有空格</span></span><br><span class="line">                <span class="keyword">if</span> (Character.isLetter(uname.charAt(i))) &#123;</span><br><span class="line">                    conUname = <span class="keyword">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    conUname = <span class="keyword">false</span>;</span><br><span class="line">                    System.out.println(<span class="string">"用户名只能由字母组成，且不能含有空格！"</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"用户名不能为空！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (upwd.length() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;upwd.length();j++) &#123;</span><br><span class="line">                <span class="comment">// 验证密码是否由数字和字母组成，不能含有空格</span></span><br><span class="line">                <span class="keyword">if</span> (Character.isLetterOrDigit(upwd.charAt(j))) &#123;</span><br><span class="line">                    conPwd = <span class="keyword">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    conPwd = <span class="keyword">false</span>;</span><br><span class="line">                    System.out.println(<span class="string">"密码只能由数字或字母组成！"</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"密码不能为空！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (age.length() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>;k &lt; age.length();k++) &#123;</span><br><span class="line">                <span class="comment">// 验证年龄是否由数字组成</span></span><br><span class="line">                <span class="keyword">if</span> (Character.isDigit(age.charAt(k))) &#123;</span><br><span class="line">                    conAge = <span class="keyword">true</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    conAge = <span class="keyword">false</span>;</span><br><span class="line">                    System.out.println(<span class="string">"年龄输入有误!"</span>);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"年龄必须输入！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (conUname &amp;&amp; conPwd &amp;&amp; conAge) &#123;</span><br><span class="line">            con = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            con = <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> con;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在 validateUser() 方法中，使用 for 循环遍历用户输入的用户名、密码和年龄，对其每个字符进行验证，判断其是否符合要求。在验证的过程中，分别使用了 Character 类的 isLetter() 方法、isLetterOrDigit() 方法和 isDigit() 方法。</p>
+<p>2）编写测试类 Test04，调用 Register 类中的 validateUser() 方法，对用户输入的数据进行验证，并输出验证结果，代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test04</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner input = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        System.out.println(<span class="string">"------------用户注册--------------"</span>);</span><br><span class="line">        System.out.println(<span class="string">"用户名："</span>);</span><br><span class="line">        String username = input.next();</span><br><span class="line">        System.out.println(<span class="string">"密码："</span>);</span><br><span class="line">        String pwd = input.next();</span><br><span class="line">        System.out.println(<span class="string">"年龄："</span>);</span><br><span class="line">        String age = input.next();</span><br><span class="line">        <span class="keyword">boolean</span> con = Register.validateUser(username,pwd,age);</span><br><span class="line">        <span class="keyword">if</span> (con) &#123;</span><br><span class="line">            System.out.println(<span class="string">"注册成功！"</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">"注册失败！"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 main() 方法中，通过调用 Register 类的 validateUser() 方法，获取一个 boolean 类型的变量，即表明是否验证通过。当变量值为 true 时，表示验证通过，输出注册成功的提示信息；否则表示验证未通过，输出注册失败的提示信息。</p>
+<p>运行该程序，当注册的用户名并非全部由字母组成时，提示“用户名只能由字母组成， 且不能含有空格！”信息，如下所示。</p>
+<pre><code>------------用户注册--------------
+用户名：
+tg_xiake
+密码：
+xiake
+年龄：
+123
+用户名只能由字母组成，且不能含有空格！
+注册失败！
+当注册的年龄并非只有数字组成时，则提示“年龄输入有误！”，如下所示。
+
+------------用户注册--------------
+用户名：
+admin
+密码：
+admin
+年龄：
+123a
+年龄输入有误！
+注册失败！
+当注册的密码并非只由数字或字母组成时，提示“密码只能由数字或字母组成！”，如下所示。
+
+------------用户注册--------------
+用户名：
+admin
+密码：
+admin!
+年龄：
+25
+密码只能由数字或字母组成！
+注册失败！
+如果注册的用户名、密码和年龄都通过验证，则输出“注册成功！”，如下所示。
+
+------------用户注册--------------
+用户名：
+admin
+密码：
+admin
+年龄：
+123
+注册成功！</code></pre>
+    </div>
+
+    
+    
+    
+
+    <div>
+  	  
+  	    <div>
+	
+		<div style="text-align:center;color:#bfbfbf;font-size:16px;">
+			<span>-------- 本文结束 </span>
+			<i class="fa fa-paw"></i>
+			<span> 感谢阅读 --------</span>
+		</div>
+	
+</div>
+  	  
+  	</div>
+      
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>staySample
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://myblog.iolab.top/java-base-course-6-6/" title="第 6 节 Java Character 类">https://myblog.iolab.top/java-base-course-6-6/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> Java基础教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/java-base-course-6-7/" rel="next" title="第 7 节 Java Boolean 类">
+                  <i class="fa fa-chevron-left"></i> 第 7 节 Java Boolean 类
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/java-base-course-6-5/" rel="prev" title="第 5 节 Java Number 类">
+                  第 5 节 Java Number 类 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="staySample"
+    src="/images/me.png">
+  <p class="site-author-name" itemprop="name">staySample</p>
+  <div class="site-description" itemprop="description">保持简单 保持持续</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-users"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">T-Cloud Data Studio</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

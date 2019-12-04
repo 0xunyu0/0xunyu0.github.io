@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":3,"unescape":false,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="第 8 章 Java 类和对象">
+<meta name="keywords" content="Java,Java基础教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第 8 章 Java 类和对象">
+<meta property="og:url" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-8-Java-classes-and-objects&#x2F;index.html">
+<meta property="og:site_name" content="Time - C">
+<meta property="og:description" content="第 8 章 Java 类和对象">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-8-Java-classes-and-objects&#x2F;java-base-course-8-1-1.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-8-Java-classes-and-objects&#x2F;java-base-course-8-1-2.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-8-Java-classes-and-objects&#x2F;java-base-course-8-1-3.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-8-Java-classes-and-objects&#x2F;java-base-course-8-1-4.jpg">
+<meta property="og:updated_time" content="2019-10-18T12:26:47.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;myblog.iolab.top&#x2F;java-base-course-8-Java-classes-and-objects&#x2F;java-base-course-8-1-1.jpg">
+
+<link rel="canonical" href="https://myblog.iolab.top/java-base-course-8-Java-classes-and-objects/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>第 8 章 Java 类和对象 | Time - C</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="Time - C" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Time - C</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">Time - Container</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">3</span></a>
+
+  </li>
+        <li class="menu-item menu-item-java">
+
+    <a href="/Java/" rel="section"><i class="fa fa-fw fa-send"></i>Java</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/0xunyu0" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://myblog.iolab.top/java-base-course-8-Java-classes-and-objects/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/me.png">
+      <meta itemprop="name" content="staySample">
+      <meta itemprop="description" content="保持简单 保持持续">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Time - C">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          第 8 章 Java 类和对象
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-18 20:26:47" itemprop="dateCreated datePublished" datetime="2019-10-18T20:26:47+08:00">2019-10-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">Java基础教程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>6.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>6 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <div class="note info">
+            <p>第 8 章 Java 类和对象</p>
+          </div>
+
+<a id="more"></a>
+
+<p>最早的程序开发使用的是结构化程序设计语言，随着时间的流逝，软件的规模逐渐扩大，使用结构化语言会出现各种弊端，导致无休止地拖延开发周期，产品的质量也不尽如人意。这一切都体现了结构化语言不再适合当前的软件开发。现在程序设计者们将另一种开发思想引入程序中，那就是面向对象开发思想。</p>
+<p>面向对象最关键的两个词汇是类与对象，实质上可以将类看作对象的抽象，它定义了对象所具有的属性和方法。学习 Java 语言必须掌握类与对象，这样可以从深层次理解 Java 这种面向对象语言的幵发理念。因此，掌握类与对象是学习 Java 语言的基础，可以使开发人员更好、更快地掌握 Java 编程思想与编程方式。</p>
+<p>本章将详细介绍 Java 中类的定义和对象的使用。</p>
+<div class="note info">
+            <p>本章学习要点</p>
+          </div>
+
+<div class="note success">
+            <ol><li>掌握类的声明和类的成员</li><li>熟悉类的构造方法及其使用</li><li>掌握对象的创建、销毁和使用</li><li>掌握 main() 方法、构造方法和析构方法的使用</li><li>熟悉 this 关键字的使用</li><li>了解系统提供的常用包</li><li>掌握如何声明和使用包</li></ol>
+          </div>
+
+<div class="note info">
+            <p>本章节目录</p>
+          </div>
+
+<div class="note success">
+            <p>第 1 节 Java 面向对象概述<br>第 2 节 Java 认识类和对象<br>第 3 节 Java 类的定义<br>第 4 节 Java 类的属性<br>第 5 节 Java 创建一个学生类<br>第 6 节 Java 成员方法<br>第 7 节 Java this 关键字<br>第 8 节 Java 创建对象<br>第 9 节 Java 访问对象的属性和行为<br>第 10 节 Java 对象的销毁<br>第 11 节 Java 用户修改密码<br>第 12 节 Java 访问控制修饰符<br>第 13 节 Java static 静态修饰符<br>第 14 节 Java final 修饰符<br>第 15 节 Java main()方法<br>第 16 节 Java 方法的可变参数<br>第 17 节 Java 构造方法<br>第 18 节 Java 查询个人信息<br>第 19 节 Java 析构方法<br>第 20 节 Java 包（package）<br>第 21 节 Java 使用自定义包</p>
+          </div>
+
+
+<hr>
+<h2 id="第-1-节-Java-面向对象概述"><a href="#第-1-节-Java-面向对象概述" class="headerlink" title="第 1 节 Java 面向对象概述"></a>第 1 节 Java 面向对象概述</h2><p>面向对象简称 OO（Object Oriented），20 世纪 80 年代以后，有了面向对象分析（OOA）、 面向对象设计（OOD）、面向对象程序设计（OOP）等新的系统开发方式模型的研究。</p>
+<p>对 Java 语言来说，一切皆是对象。把现实世界中的对象抽象地体现在编程世界中，一个对象代表了某个具体的操作。一个个对象最终组成了完整的程序设计，这些对象可以是独立存在的，也可以是从别的对象继承过来的。对象之间通过相互作用传递信息，实现程序开发。</p>
+<p><strong>对象的概念</strong></p>
+<p>Java 是面向对象的编程语言，对象就是面向对象程序设计的核心。所谓对象就是真实世界中的实体，对象与实体是一一对应的，也就是说现实世界中每一个实体都是一个对象，它是一种具体的概念。对象有以下特点：</p>
+<ul>
+<li>对象具有属性和行为。</li>
+<li>对象具有变化的状态。</li>
+<li>对象具有唯一性。</li>
+<li>对象都是某个类别的实例。</li>
+<li>一切皆为对象，真实世界中的所有事物都可以视为对象。</li>
+</ul>
+<p>例如，在真实世界的学校里，会有学生和老师等实体，学生有学号、姓名、所在班级等属性（数据），学生还有学习、提问、吃饭和走路等操作。学生只是抽象的描述，这个抽象的描述称为“类”。在学校里活动的是学生个体，即张同学、李同学等，这些具体的个体称为“对象”，“对象”也称为“实例”。</p>
+<p><strong>面向对象的三大核心特性</strong></p>
+<p>面向对象开发模式更有利于人们开拓思维，在具体的开发过程中便于程序的划分，方便程序员分工合作，提高开发效率。面向对象程序设计有以下优点。</p>
+<p>1.可重用性：代码重复使用，减少代码量，提高开发效率。下面介绍的面向对象的三大核心特性（继承、封装和多态）都围绕这个核心。<br>2.可扩展性：指新的功能可以很容易地加入到系统中来，便于软件的修改。<br>3.可管理性：能够将功能与数据结合，方便管理。</p>
+<p>该开发模式之所以使程序设计更加完善和强大，主要是因为面向对象具有继承、封装和多态 3 个核心特性。</p>
+<p>（1）继承性</p>
+<p>如同生活中的子女继承父母拥有的所有财产，程序中的继承性是指子类拥有父类的全部特征和行为，这是类之间的一种关系。Java 只支持单继承。</p>
+<p>例如定义一个语文老师类和数学老师类，如果不采用继承方式，那么两个类中需要定义的属性和方法如图 1 所示。</p>
+<p><img src="/java-base-course-8-Java-classes-and-objects/java-base-course-8-1-1.jpg" alt="图 1  语文老师类和数学老师类中的属性和方法"></p>
+<p>从图 1 能够看出，语文老师类和数学老师类中的许多属性和方法相同，这些相同的属性和方法可以提取出来放在一个父类中，这个父类用于被语文老师类和数学老师类继承。当然父类还可以继承别的类，如图 2 所示。</p>
+<p><img src="/java-base-course-8-Java-classes-and-objects/java-base-course-8-1-2.jpg" alt="图 2  父类继承示例图"></p>
+<p>总结图 2 的继承关系，可以用概括的树形关系来表示，如图 3 所示。</p>
+<p><img src="/java-base-course-8-Java-classes-and-objects/java-base-course-8-1-3.jpg" alt="图 3  类继承示例图"></p>
+<p>从图 3 中可以看出，学校主要人员是一个大的类别，老师和学生是学校主要人员的两个子类，而老师又可以分为语文老师和数学老师两个子类，学生也可以分为班长和组长两个子类。</p>
+<p>使用这种层次形的分类方式，是为了将多个类的通用属性和方法提取出来，放在它们的父类中，然后只需要在子类中各自定义自己独有的属性和方法，并以继承的形式在父类中获取它们的通用属性和方法即可。</p>
+<p>提示：C++ 支持多继承，多继承就是一个子类可有多个父类。例如，客轮是轮船也是交通工具，客轮的父类是轮船和交通工具。多继承会引起很多冲突问题，因此现在很多面向对象的语言都不支持多继承。Java 语言是单继承的，即只能有一个父类，但 Java 可以实现多个接口（接口类似于类，但接口的成员没有执行体。详细了解可参考《Java接口》一节），可以防止多继承所引起的冲突问题。</p>
+<p>（2）封装性</p>
+<p>封装是将代码及其处理的数据绑定在一起的一种编程机制，该机制保证了程序和数据都不受外部干扰且不被误用。封装的目的在于保护信息，使用它的主要优点如下。<br>保护类中的信息，它可以阻止在外部定义的代码随意访问内部代码和数据。<br>隐藏细节信息，一些不需要程序员修改和使用的信息，比如取款机中的键盘，用户只需要知道按哪个键实现什么操作就可以，至于它内部是如何运行的，用户不需要知道。<br>有助于建立各个系统之间的松耦合关系，提高系统的独立性。当一个系统的实现方式发生变化时，只要它的接口不变，就不会影响其他系统的使用。例如 U 盘，不管里面的存储方式怎么改变，只要 U 盘上的 USB 接口不变，就不会影响用户的正常操作。<br>提高软件的复用率，降低成本。每个系统都是一个相对独立的整体，可以在不同的环境中得到使用。例如，一个 U 盘可以在多台电脑上使用。</p>
+<p>Java 语言的基本封装单位是类。由于类的用途是封装复杂性，所以类的内部有隐藏实现复杂性的机制。Java 提供了私有和公有的访问模式，类的公有接口代表外部的用户应该知道或可以知道的每件东西，私有的方法数据只能通过该类的成员代码来访问，这就可以确保不会发生不希望的事情。</p>
+<p>（3）多态性</p>
+<p>面向对象的多态性，即“一个接口，多个方法”。多态性体现在父类中定义的属性和方法被子类继承后，可以具有不同的属性或表现方式。多态性允许一个接口被多个同类使用，弥补了单继承的不足。多态概念可以用树形关系来表示，如图 4 所示。</p>
+<p><img src="/java-base-course-8-Java-classes-and-objects/java-base-course-8-1-4.jpg" alt="图 4  多态示例图"></p>
+<p>从图 4 中可以看出，老师类中的许多属性和方法可以被语文老师类和数学老师类同时使用，这样也不易出错。</p>
+<hr>
+<h2 id="第-2-节-Java-认识类和对象"><a href="#第-2-节-Java-认识类和对象" class="headerlink" title="第 2 节 Java 认识类和对象"></a>第 2 节 Java 认识类和对象</h2><p>在面向对象中，类和对象是最基本、最重要的组成单元。类实际上是表示一个客观世界某类群体的一些基本特征抽象。对象就是表示一个个具体的东西。所以说类是对象的抽象，对象是类的具体。</p>
+<p>让我们来看看人类所具有的一些特征，这些特征包括属性（一些参数、数值）以及方法（一些行为，他能干什么）。</p>
+<p>每个人都有身高、体重、年龄、血型等属性，人会劳动、会直立行走、会用自己的头脑去创造工具等方法。人之所以能区别于其他类型的动物，是因为每个人都具有“人”这个群体的属性与方法。</p>
+<p>“人类”只是一个抽象的概念，它仅仅是一个概念，是不存在的实体！但是所有具备“人类”这个群体的属性与方法的对象都叫人！这个对象“人” 是实际存在的实体！每个人都是“人”这个群体的一个对象。</p>
+<p>老虎为什么不是人？因为它不具备“人”这个群体的属性与方法，老虎不会直立行走，不会使用工具等，所以说老虎不是人！也就是说，类是概念模型，定义对象的所有特性和所需的操作，对象是真实的模型，是一个具体的实体。</p>
+<p>由此可见，类是描述了一组有相同特性（属性）和相同行为（方法）的一组对象的集合。</p>
+<p>对象或实体所拥有的特征在类中表示时称为类的属性。例如，每个人都具有姓名、年龄和体重，这是所有人共有的特征。但是每一个对象的属性值又各不相同，例如，小明和小红都具有体重这个属性，但是他们的体重值是不同的。</p>
+<p>对象执行的操作称为类的方法。比如，“人”这个对象都具有的行为是“吃饭”，因此，吃饭就是“人”类的一个方法。</p>
+<p>综上所述，类是描述实体的“模板”和“原型”，它定义了属于这个类的对象所应该具有的状态和行为。比如一名学生在上课。一名正在上课的学生是类，它定义的信息有：姓名、上课。</p>
+<p>使用该类定义的不同姓名的人在上课是对象，他们可能是小明、小红、小丽、张会等。在 Java 面向对象编程中，用自定义的类模型可以创建该类的一个实例，也就是对象。</p>
+<p>类是实体对象的概念模型，因此通常是笼统的、不具体的。关于类和对象，初学者在理解上是存在一定难度的。表 1 给出了类和对象的更多示例。</p>
+<p>表1 类和对象的示例</p>
+<table>
+<thead>
+<tr>
+<th align="center">类</th>
+<th align="center">对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">人</td>
+<td align="center">正在清洁的环卫工人小刘</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">教室里的学生张丽</td>
+</tr>
+<tr>
+<td align="center">汽车</td>
+<td align="center">一辆黄色的宝马跑车</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">一辆白色的林肯轿车</td>
+</tr>
+<tr>
+<td align="center">动物</td>
+<td align="center">一只叫“猫咪”的小花猫</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">一只叫“欢欢”的贵宾犬</td>
+</tr>
+</tbody></table>
+<p>类是构造面向对象程序的基本单位，是抽取了同类对象的共同属性和方法所形成的对象或实体的“模板”。而对象是现实世界中实体的描述，对象要创建才存在，有了对象才能对对象进行操作。类是对象的模板，对象是类的实例。</p>
+<hr>
+<h2 id="第-3-节-Java-类的定义"><a href="#第-3-节-Java-类的定义" class="headerlink" title="第 3 节 Java 类的定义"></a>第 3 节 Java 类的定义</h2><p>类是 Java 中的一种重要的引用数据类型，也是组成 Java 程序的基本要素，因为所有的 Java 程序都是基于类的。本节介绍如何定义类。</p>
+<p>在 Java 中定义一个类，需要使用 class 关键字、一个自定义的类名和一对表示程序体的大括号。完整语法如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[public][abstract|final]class&lt;class_name&gt;[extends&lt;class_name&gt;][implements&lt;interface_name&gt;] &#123;</span><br><span class="line">    <span class="comment">// 定义属性部分</span></span><br><span class="line">    &lt;property_type&gt;&lt;property1&gt;;</span><br><span class="line">    &lt;property_type&gt;&lt;property2&gt;;</span><br><span class="line">    &lt;property_type&gt;&lt;property3&gt;;</span><br><span class="line">    …</span><br><span class="line">    <span class="comment">// 定义方法部分</span></span><br><span class="line">    function1();</span><br><span class="line">    function2();</span><br><span class="line">    function3();</span><br><span class="line">    …</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>提示：上述语法中，中括号“[]”中的部分表示可以省略，竖线“|”表示“或关系”，例如 abstract|final，说明可以使用 abstract 或 final 关键字，但是两个关键字不能同时出现。</p>
+<p>上述语法中各关键字的描述如下。</p>
+<ul>
+<li>public：表示“共有”的意思。如果使用 public 修饰，则可以被其他类和程序访问。每个 Java 程序的主类都必须是 public 类，作为公共工具供其他类和程序使用的类应定义为 public 类。</li>
+<li>abstract：如果类被 abstract 修饰，则该类为抽象类，抽象类不能被实例化，但抽象类中可以有抽象方法（使用 abstract 修饰的方法）和具体方法（没有使用 abstract 修饰的方法）。继承该抽象类的所有子类都必须实现该抽象类中的所有抽象方法（除非子类也是抽象类）。</li>
+<li>final：如果类被 final 修饰，则不允许被继承。</li>
+<li>class：声明类的关键字。</li>
+<li>class_name：类的名称。</li>
+<li>extends：表示继承其他类。</li>
+<li>implements：表示实现某些接口。</li>
+<li>property_type：表示成员变量的类型。</li>
+<li>property：表示成员变量名称。</li>
+<li>function()：表示成员方法名称。</li>
+</ul>
+<p>Java 类名的命名规则：<br>1.类名应该以下划线（_）或字母开头，最好以字母开头。<br>2.第一个字母最好大写，如果类名由多个单词组成，则每个单词的首字母最好都大写。<br>3.类名不能为 Java 中的关键字，例如 boolean、this、int 等。<br>4.类名不能包含任何嵌入的空格或点号以及除了下划线（_）和美元符号（$）字符之外的特殊字符。<br><strong>例 1</strong><br>创建一个新的类，就是创建一个新的数据类型。实例化一个类，就是得到类的一个对象。因此，对象就是一组变量和相关方法的集合，其中变量表明对象的状态和属性，方法表明对象所具有的行为。定义一个类的步骤如下所述。</p>
+<p>(1) 声明类。编写类的最外层框架，声明一个名称为 Person 的类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 类的主体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>(2) 编写类的属性。类中的数据和方法统称为类成员。其中，类的属性就是类的数据成员。通过在类的主体中定义变量来描述类所具有的特征（属性），这里声明的变量称为类的成员变量。</p>
+<p>(3) 编写类的方法。类的方法描述了类所具有的行为，是类的方法成员。可以简单地把方法理解为独立完成某个功能的单元模块。</p>
+<p>下面来定义一个简单的 Person 类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;    <span class="comment">// 姓名</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;    <span class="comment">// 年龄</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">tell</span><span class="params">()</span> </span>&#123;   </span><br><span class="line">        <span class="comment">// 定义说话的方法</span></span><br><span class="line">        System.out.println(name+<span class="string">"今年"</span>+age+<span class="string">"岁！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上述代码，在 Person 类中首先定义了两个属性，分别为 name 和 age，然后定义了一个名称为 tell() 的方法。</p>
+<hr>
+<h2 id="第-4-节-Java-类的属性"><a href="#第-4-节-Java-类的属性" class="headerlink" title="第 4 节 Java 类的属性"></a>第 4 节 Java 类的属性</h2><p>在 Java 中类的成员变量定义了类的属性。例如，一个学生类中一般需要有姓名、性别和年龄等属性，这时就需要定义姓名、性别和年龄 3 个属性。声明成员变量的语法如下：</p>
+<pre><code>[public|protected|private][static][final]&lt;type&gt;&lt;variable_name&gt;</code></pre><p>各参数的含义如下。<br>*　public、protected、private：用于表示成员变量的访问权限。</p>
+<ul>
+<li>static：表示该成员变量为类变量，也称为静态变量。</li>
+<li>final：表示将该成员变量声明为常量，其值无法更改。</li>
+<li>type：表示变量的类型。</li>
+<li>variable_name：表示变量名称。</li>
+</ul>
+<p>可以在声明成员变量的同时对其进行初始化，如果声明成员变量时没有对其初始化，则系统会使用默认值初始化成员变量。</p>
+<p>初始化的默认值如下：</p>
+<ul>
+<li>整数型（byte、short、int 和 long）的基本类型变量的默认值为 0。</li>
+<li>单精度浮点型（float）的基本类型变量的默认值为 0.0f。</li>
+<li>双精度浮点型（double）的基本类型变量的默认值为 0.0d。</li>
+<li>字符型（char）的基本类型变量的默认值为 “\u0000”。</li>
+<li>布尔型的基本类型变量的默认值为 false。</li>
+<li>数组引用类型的变量的默认值为 null。如果创建了数组变量的实例，但没有显式地为每个元素赋值，则数组中的元素初始化值采用数组数据类型对应的默认值。</li>
+</ul>
+<p>定义类的成员变量的示例如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> String name;    <span class="comment">//姓名</span></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> sex=<span class="number">0</span>;    <span class="comment">//性别：0表示女孩，1表示男孩</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;    <span class="comment">//年龄</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上述示例的 Student 类中定义了 3 个成员变量：String 类型的 name、int 类型的 sex 和 int 类型的 age。其中，name 的访问修饰符为 public，初始化值为 null；sex 的访问修饰符为 friendly（默认），初始化值为 0，表示性别为女，且其值无法更改；age 的访问修饰符为 private，初始化值为 0。<br><strong>例 1</strong><br>下面以一个简单的例子来介绍成员变量的初始值，代码如下所示。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Counter</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> sum;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        System.out.println(sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这里用静态的方法来修饰变量 sum，输出结果是 int 类型的初始值，即：0。</p>
+<hr>
+<h2 id="第-5-节-Java-创建一个学生类"><a href="#第-5-节-Java-创建一个学生类" class="headerlink" title="第 5 节 Java 创建一个学生类"></a>第 5 节 Java 创建一个学生类</h2><hr>
+<h2 id="第-6-节-Java-成员方法"><a href="#第-6-节-Java-成员方法" class="headerlink" title="第 6 节 Java 成员方法"></a>第 6 节 Java 成员方法</h2><hr>
+<h2 id="第-7-节-Java-this-关键字"><a href="#第-7-节-Java-this-关键字" class="headerlink" title="第 7 节 Java this 关键字"></a>第 7 节 Java this 关键字</h2><hr>
+<h2 id="第-8-节-Java-创建对象"><a href="#第-8-节-Java-创建对象" class="headerlink" title="第 8 节 Java 创建对象"></a>第 8 节 Java 创建对象</h2><hr>
+<h2 id="第-9-节-Java-访问对象的属性和行为"><a href="#第-9-节-Java-访问对象的属性和行为" class="headerlink" title="第 9 节 Java 访问对象的属性和行为"></a>第 9 节 Java 访问对象的属性和行为</h2><hr>
+<h2 id="第-10-节-Java-对象的销毁"><a href="#第-10-节-Java-对象的销毁" class="headerlink" title="第 10 节 Java 对象的销毁"></a>第 10 节 Java 对象的销毁</h2><hr>
+<h2 id="第-11-节-Java-用户修改密码"><a href="#第-11-节-Java-用户修改密码" class="headerlink" title="第 11 节 Java 用户修改密码"></a>第 11 节 Java 用户修改密码</h2><hr>
+<h2 id="第-12-节-Java-访问控制修饰符"><a href="#第-12-节-Java-访问控制修饰符" class="headerlink" title="第 12 节 Java 访问控制修饰符"></a>第 12 节 Java 访问控制修饰符</h2><hr>
+<h2 id="第-13-节-Java-static-静态修饰符"><a href="#第-13-节-Java-static-静态修饰符" class="headerlink" title="第 13 节 Java static 静态修饰符"></a>第 13 节 Java static 静态修饰符</h2><hr>
+<h2 id="第-14-节-Java-final-修饰符"><a href="#第-14-节-Java-final-修饰符" class="headerlink" title="第 14 节 Java final 修饰符"></a>第 14 节 Java final 修饰符</h2><hr>
+<h2 id="第-15-节-Java-main-方法"><a href="#第-15-节-Java-main-方法" class="headerlink" title="第 15 节 Java main()方法"></a>第 15 节 Java main()方法</h2><hr>
+<h2 id="第-16-节-Java-方法的可变参数"><a href="#第-16-节-Java-方法的可变参数" class="headerlink" title="第 16 节 Java 方法的可变参数"></a>第 16 节 Java 方法的可变参数</h2><hr>
+<h2 id="第-17-节-Java-构造方法"><a href="#第-17-节-Java-构造方法" class="headerlink" title="第 17 节 Java 构造方法"></a>第 17 节 Java 构造方法</h2><hr>
+<h2 id="第-18-节-Java-查询个人信息"><a href="#第-18-节-Java-查询个人信息" class="headerlink" title="第 18 节 Java 查询个人信息"></a>第 18 节 Java 查询个人信息</h2><hr>
+<h2 id="第-19-节-Java-析构方法"><a href="#第-19-节-Java-析构方法" class="headerlink" title="第 19 节 Java 析构方法"></a>第 19 节 Java 析构方法</h2><hr>
+<h2 id="第-20-节-Java-包（package）"><a href="#第-20-节-Java-包（package）" class="headerlink" title="第 20 节 Java 包（package）"></a>第 20 节 Java 包（package）</h2><hr>
+<h2 id="第-21-节-Java-使用自定义包"><a href="#第-21-节-Java-使用自定义包" class="headerlink" title="第 21 节 Java 使用自定义包"></a>第 21 节 Java 使用自定义包</h2><hr>
+
+    </div>
+
+    
+    
+    
+
+    <div>
+  	  
+  	    <div>
+	
+		<div style="text-align:center;color:#bfbfbf;font-size:16px;">
+			<span>-------- 本文结束 </span>
+			<i class="fa fa-paw"></i>
+			<span> 感谢阅读 --------</span>
+		</div>
+	
+</div>
+  	  
+  	</div>
+      
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>staySample
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://myblog.iolab.top/java-base-course-8-Java-classes-and-objects/" title="第 8 章 Java 类和对象">https://myblog.iolab.top/java-base-course-8-Java-classes-and-objects/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
+              <a href="/tags/Java%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> Java基础教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/java-base-course-7-Java-array-processing/" rel="next" title="第 7 章 Java 数组处理">
+                  <i class="fa fa-chevron-left"></i> 第 7 章 Java 数组处理
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/java-base-course-9-Java-inheritance-and-polymorphism/" rel="prev" title="第 9 章 Java 继承和多态">
+                  第 9 章 Java 继承和多态 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第-1-节-Java-面向对象概述"><span class="nav-number">1.</span> <span class="nav-text">第 1 节 Java 面向对象概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-2-节-Java-认识类和对象"><span class="nav-number">2.</span> <span class="nav-text">第 2 节 Java 认识类和对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-3-节-Java-类的定义"><span class="nav-number">3.</span> <span class="nav-text">第 3 节 Java 类的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-4-节-Java-类的属性"><span class="nav-number">4.</span> <span class="nav-text">第 4 节 Java 类的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-5-节-Java-创建一个学生类"><span class="nav-number">5.</span> <span class="nav-text">第 5 节 Java 创建一个学生类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-6-节-Java-成员方法"><span class="nav-number">6.</span> <span class="nav-text">第 6 节 Java 成员方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-7-节-Java-this-关键字"><span class="nav-number">7.</span> <span class="nav-text">第 7 节 Java this 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-8-节-Java-创建对象"><span class="nav-number">8.</span> <span class="nav-text">第 8 节 Java 创建对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-9-节-Java-访问对象的属性和行为"><span class="nav-number">9.</span> <span class="nav-text">第 9 节 Java 访问对象的属性和行为</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-10-节-Java-对象的销毁"><span class="nav-number">10.</span> <span class="nav-text">第 10 节 Java 对象的销毁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-11-节-Java-用户修改密码"><span class="nav-number">11.</span> <span class="nav-text">第 11 节 Java 用户修改密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-12-节-Java-访问控制修饰符"><span class="nav-number">12.</span> <span class="nav-text">第 12 节 Java 访问控制修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-13-节-Java-static-静态修饰符"><span class="nav-number">13.</span> <span class="nav-text">第 13 节 Java static 静态修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-14-节-Java-final-修饰符"><span class="nav-number">14.</span> <span class="nav-text">第 14 节 Java final 修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-15-节-Java-main-方法"><span class="nav-number">15.</span> <span class="nav-text">第 15 节 Java main()方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-16-节-Java-方法的可变参数"><span class="nav-number">16.</span> <span class="nav-text">第 16 节 Java 方法的可变参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-17-节-Java-构造方法"><span class="nav-number">17.</span> <span class="nav-text">第 17 节 Java 构造方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-18-节-Java-查询个人信息"><span class="nav-number">18.</span> <span class="nav-text">第 18 节 Java 查询个人信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-19-节-Java-析构方法"><span class="nav-number">19.</span> <span class="nav-text">第 19 节 Java 析构方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-20-节-Java-包（package）"><span class="nav-number">20.</span> <span class="nav-text">第 20 节 Java 包（package）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第-21-节-Java-使用自定义包"><span class="nav-number">21.</span> <span class="nav-text">第 21 节 Java 使用自定义包</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="staySample"
+    src="/images/me.png">
+  <p class="site-author-name" itemprop="name">staySample</p>
+  <div class="site-description" itemprop="description">保持简单 保持持续</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-users"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">T-Cloud Data Studio</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
